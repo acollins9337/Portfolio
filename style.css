@@ -1,7 +1,7 @@
 body {
     margin: 0;                     /* remove default page margin */
     font-family: sans-serif;       /* default font */
-    background-color: whitesmoke;     /* main page background */
+    background-color: gainsboro;     /* main page background */
     color: #333;                   /* default text color */
     line-height: 1.6;              /* readable spacing */
 }
@@ -18,16 +18,17 @@ body {
 }
 
 .name-tab {
-    background-color: whitesmoke;      /* blends with page */
+    background-color: gainsboro;      /* blends with page */
     color: #333;
     font-weight: bold;
     font-size: 1.2rem;
     padding: 10px 20px;
     border: 4px solid steelblue;
-    border-bottom: 4px solid whitesmoke;            
+    border-bottom: 4px solid gainsboro;            
     border-radius: 8px 8px 0 0;
     display: flex;
     align-items: center;
+    box-shadow: -6px 6px 15px rgba(0,0,0,0.25);
 }
 
 .nav-links {
@@ -39,31 +40,32 @@ body {
 }
 
 .nav-links a {
-    color: whitesmoke;
+    color: gainsboro;
     text-decoration: none;
     font-size: 1rem;
     padding: 8px 12px;
     border-radius: 6px;
-    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .nav-links a:hover {
     transform: scale(1.05);
-    background-color: whitesmoke;
+    background-color: gainsboro;
     color: steelblue;
+    box-shadow: -6px -6px 15px rgba(0,0,0,0.25);
 }
 
 .nav-links a.active {
-    background-color: whitesmoke;
+    background-color: gainsboro;
     color: steelblue;
     transform: scale(1.05);
 }
 
 .content {
-    width: 100%;
+    width: 90%;
     margin: 10px auto;
     font-family: sans-serif;
     line-height: 1.6;
-    background-color: whitesmoke;
+    background-color: gainsboro;
     border-radius: 8px;
 }
