@@ -71,6 +71,10 @@ body {
     transform: scale(1.05);
 }
 
+.link-tab {
+    margin-left: auto;
+}
+
 .link-tab a {
     display: flex;
     align-items: center;
@@ -92,8 +96,8 @@ body {
 
 /* LinkedIn icon */
 .linkedin-icon {
-    width: 16px;
-    height: 16px;
+    width: 32px;
+    height: 32px;
     object-fit: contain;
     display: block;
     transition: transform 0.2s ease;
