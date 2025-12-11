@@ -12,26 +12,18 @@ body {
     background-color: steelblue;
     padding: 0;
     margin: 0;
-}
-
-.navbar-container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 100%;
-    margin: 0; /* center horizontally */
-    padding: 0;  
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* shadow only around the box */
-    border-radius: 8px;
 }
 
 .name-tab {
     background-color: whitesmoke;      /* blends with page */
     color: #333;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 2.0rem;
     padding: 10px 20px;
-    border: 2px solid steelblue;
+    border: 4px solid steelblue;
     border-bottom: none;            
     border-radius: 8px 8px 0 0;
 }
