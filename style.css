@@ -75,7 +75,7 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  animation: glitch 2s infinite;
+  animation: glitch 1.5s infinite;
   clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
   transform: translate(-2px, -2px);
   color: lightblue;
