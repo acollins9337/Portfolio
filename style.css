@@ -1,9 +1,14 @@
 body {
     margin: 0;                     /* remove default page margin */
     font-family: "Inter", system-ui, sans-serif;       /* default font */
-    background-color: ghostwhite;     /* main page background */
+    background-color: darkgrey;     /* main page background */
     color: #333;                   /* default text color */
-    line-height: 1.6;              /* readable spacing */
+    line-height: 1.6;
+    width: 100%;
+    background-image: url("nav_background.png");
+    background-size: 120% auto;      /* image fills navbar */
+    background-position: center; /* keeps image centered */
+    animation: bg-pan 60s linear infinite;              /* readable spacing */
 }
 
 h1, h2, h3 {
@@ -32,11 +37,6 @@ h3 {
 /* Navigation bar styling */
 .navbar {
     font-family: "Poppins", sans-serif;
-    width: 100%;
-    background-image: url("nav_background.png");
-    background-size: 120% auto;      /* image fills navbar */
-    background-position: center; /* keeps image centered */
-    animation: bg-pan 30s linear infinite;
     padding: 10px 0 0 0;
     margin: 0;
     display: flex;
@@ -51,17 +51,25 @@ h3 {
 }
 
 .name-tab {
-    background-color: ghostwhite;      /* blends with page */
-    color: navy;
+    background-color: rgba(255,255,255,0.25);  
+    backdrop-filter: blur(6px);
+    color: ghostwhite;
     font-weight: bold;
     font-size: 2.0rem;
     padding: 10px 20px;
     margin-left: 10px;
-    border: none;
-    border-bottom: 4px solid ghostwhite;            
-    border-radius: 8px 8px 0 0;
+    border: none;          
+    border-radius: 8px 8px 8px 8px;
     display: flex;
     align-items: center;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.name-tab:hover {
+    transform: scale(1.05);
+    background-color: ghostwhite;
+    color: navy;
+    box-shadow: 6px 6px 15px rgba(0,0,0,0.25);
 }
 
 .name-tab .text{
@@ -132,16 +140,17 @@ h3 {
 }
 
 .content {
-    width: 100%;
+    background-color: rgba(255,255,255,0.25);  
+    backdrop-filter: blur(6px);
+    width: 90%;
     margin: 20px auto;
     line-height: 1.6;
-    background-color: ghostwhite;
     justify-content: center;
     display: flex;
 }
 
 .content .wide{
-    width: 90%;
+    width: 100%;
     border: 3px inset red;
 }
 
