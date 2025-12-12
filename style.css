@@ -1,19 +1,43 @@
 body {
     margin: 0;                     /* remove default page margin */
-    font-family: sans-serif;       /* default font */
+    font-family: "Inter", system-ui, sans-serif;       /* default font */
     background-color: ghostwhite;     /* main page background */
     color: #333;                   /* default text color */
     line-height: 1.6;              /* readable spacing */
 }
 
+h1, h2, h3 {
+    font-family: "Poppins", sans-serif;
+    color: navy;
+    letter-spacing: 0.5px;    /* subtle modern spacing */
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
 /* Navigation bar styling */
 .navbar {
+    font-family: "Poppins", sans-serif;
     width: 100%;
     background-image: url("nav_background.png");
     background-size: 120% auto;      /* image fills navbar */
     background-position: center; /* keeps image centered */
     animation: bg-pan 30s linear infinite;
-    padding: 0;
+    padding: 6px 6px 0 6px;
     margin: 0;
     display: flex;
     align-items: center;
@@ -39,12 +63,16 @@ body {
     align-items: center;
 }
 
+.name-tab .text{
+    box-shadow: 4px 4px 0 rgba(173,216,230,1.0);
+}
+
 .nav-links {
     display: flex;
     gap: 25px;
-    margin-left: 20px;
-    padding: 0 20px;
+    padding: 0 20px 0 20px;
     align-items: center;
+    box-shadow: 6px 6px 15px rgba(0,0,0,0.25) inset;
 }
 
 .nav-links a {
@@ -86,6 +114,7 @@ body {
     transition: transform 0.2s ease, background-color 0.2s ease,
                 box-shadow 0.2s ease;
     text-decoration: none; /* ensures no underline */
+    display: flex;
 }
 
 .link-tab a:hover {
@@ -103,15 +132,53 @@ body {
     transition: transform 0.2s ease;
 }
 
-.link-tab a:hover .linkedin-icon {
+.link-tab a:hover .icon {
     transform: scale(1.1);
 }
 
 .content {
-    width: 90%;
-    margin: 10px auto;
-    font-family: sans-serif;
+    width: 100%;
+    margin: 20px auto;
     line-height: 1.6;
     background-color: ghostwhite;
+    justify-content: center;
+    display: flex;
+}
+
+.wide .content{
+    width: 85%;
+    max-width: 1200px;
+}
+
+.split-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;              /* spacing between halves */
+    width: 100%;
+    margin: 40px 0;
+    max-width: 1200px;
+}
+
+.split-figure {
+    flex: 0 0 auto;         /* image keeps its natural or set width */
+}
+
+.split-figure img {
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
+}
+
+.split-figure .cap {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+    max-width: 90%;        /* visually balanced under the image */
+}
+
+.spit-figure-text {
+    flex: 1 1 auto;         /* text expands into remaining space */
+    min-width: 200px;       /* optional for readability */
 }
