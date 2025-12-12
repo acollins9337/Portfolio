@@ -7,7 +7,7 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: "Poppins", sans-serif;
+    font-family: sans-serif;
     color: navy;
     letter-spacing: 0.5px;    /* subtle modern spacing */
     margin-top: 30px;
@@ -31,7 +31,7 @@ h3 {
 
 /* Navigation bar styling */
 .navbar {
-    font-family: "Poppins", sans-serif;
+    font-family: sans-serif;
     width: 100%;
     background-image: url("nav_background.png");
     background-size: 120% auto;      /* image fills navbar */
