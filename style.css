@@ -56,6 +56,7 @@ h3 {
     font-weight: bold;
     font-size: 2.0rem;
     padding: 10px 20px;
+    margin-left: 10px;
     border: none;
     border-bottom: 4px solid ghostwhite;            
     border-radius: 8px 8px 0 0;
@@ -64,37 +65,7 @@ h3 {
 }
 
 .name-tab .text{
-    position: relative;
     text-shadow: 2px 2px 2px lightblue;
-}
-
-.name-tab .text::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  animation: glitch 1.5s infinite;
-  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-  transform: translate(-2px, -2px);
-  color: lightblue;
-  z-index: 1;
-}
-
-@keyframes glitch {
-  0%, 100% {
-    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-    transform: translate(0,0);
-  }
-  33% {
-    clip-path: polygon(0 0, 100% 0, 100% 15%, 0 15%);
-    transform: translate(-5px, -5px);
-  }
-  66% {
-    clip-path: polygon(0 85%, 100% 85%, 100% 100%, 0 100%);
-    transform: translate(5px, 5px);
-  }
 }
 
 .nav-links {
@@ -149,8 +120,8 @@ h3 {
 
 /* icon */
 .link-tab .icon {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     object-fit: contain;
     display: block;
     transition: transform 0.2s ease;
