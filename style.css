@@ -54,7 +54,7 @@ h3 {
     background-color: ghostwhite;      /* blends with page */
     color: navy;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2.0rem;
     padding: 10px 20px;
     border: none;
     border-bottom: 4px solid ghostwhite;            
@@ -65,6 +65,7 @@ h3 {
 
 .name-tab .text{
     position: relative;
+    text-shadow: 2px 2px 2px lightblue;
 }
 
 .name-tab .text::before {
@@ -106,7 +107,7 @@ h3 {
 .nav-links a {
     color: ghostwhite;
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1.7rem;
     padding: 8px 12px;
     border-radius: 6px;
     background-color: rgba(255,255,255,0.25);  
@@ -148,8 +149,8 @@ h3 {
 
 /* icon */
 .link-tab .icon {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
     display: block;
     transition: transform 0.2s ease;
@@ -166,11 +167,10 @@ h3 {
     background-color: ghostwhite;
     justify-content: center;
     display: flex;
-    border: 3px inset black;
 }
 
 .content .wide{
-    width: 85%;
+    width: 90%;
     border: 3px inset red;
 }
 
