@@ -8,6 +8,7 @@ body {
     background-size: 120% auto;      /* image fills navbar */
     background-position: center; /* keeps image centered */
     animation: bg-pan 40s linear infinite;              /* readable spacing */
+    font-size: 1.25rem;
 }
 
 h1, h2, h3 {
@@ -19,17 +20,17 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 2.4rem;
+    font-size: 3.7rem;
     font-weight: 700;
 }
 
 h2 {
-    font-size: 1.9rem;
+    font-size: 2.5rem;
     font-weight: 600;
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     font-weight: 500;
 }
 
@@ -43,7 +44,7 @@ h3 {
 .navbar {
     width: 90%;
     font-family: "Poppins", sans-serif;
-    padding: 10px 0 0 0;
+    padding: 20px 0 0 0;
     margin: 0;
     display: flex;
     align-items: center;
