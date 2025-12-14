@@ -144,7 +144,7 @@ h3 {
 
 .content {
     background-color: black;
-    box-shadow: 0 10px 20px black;
+    box-shadow: 0 -15px 30px black;
     border-radius: 16px;  
     width: 90%;
     margin: 30px auto;
@@ -180,6 +180,14 @@ h3 {
 .split-text {
     flex: 1 1 auto;         /* text expands into remaining space */
     min-width: 200px;       /* optional for readability */
+}
+
+.split-text.align-left {
+    margin-right: auto;
+}
+
+.split-text.align-right {
+    margin-left: auto;
 }
 
 @media (max-width: 768px) {
