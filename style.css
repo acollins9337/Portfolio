@@ -260,13 +260,12 @@ h3 {
 
 .project-info {
     position: absolute;
-    left: 100%;
+    left: 0%;
     width: 400px;
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transform: translateX(-100%);
     opacity: 0;
     transition: transform 0.6s ease, opacity 0.6s ease, width 0.6s ease;
     z-index: 1;
