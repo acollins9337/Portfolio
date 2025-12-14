@@ -154,6 +154,7 @@ h3 {
     flex-direction: column;   /* ← THIS forces rows */
     align-items: center;      /* centers each row horizontally */
     justify-content: center;
+    border: 2px solid lightblue
 }
 
 .content .wide {
@@ -208,12 +209,14 @@ h3 {
     width: 100%;
     margin-top: 20px;
     overflow: visible;       /* allow the image to move without clipping */
+    border: 2px solid white
 }
 
 .project-center {
     display: flex;
     justify-content: center; /* centers content inside wrapper */
     width: auto;             /* shrink to content */
+    border: 2px solid red;
 }
 
 .project-media {
@@ -223,6 +226,7 @@ h3 {
     max-width: 900px;       /* optional max width */
     position: relative;
     gap: 0;                 /* spacing between image & info handled by transforms */
+    border: 2px solid greenyellow;
 }
 
 .project-image-mask {
@@ -263,7 +267,7 @@ h3 {
     justify-content: center;
     transform: translateX(-75%);
     opacity: 0;
-    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition: transform 0.6s ease, opacity 0.6s ease, width 0.6s ease;
     z-index: 1;
 }
 
