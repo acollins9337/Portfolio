@@ -207,7 +207,7 @@ h3 {
     margin-top: 20px;
     display: flex;
     align-items: center;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .project-center {
@@ -226,15 +226,16 @@ h3 {
 
 .project-image {
     position: relative;
-    max-width: 450px;
     transition: transform 0.6s ease;
+    width: 100%
 }
 
 .project-image-mask {
     position: relative;
-    width: 100%;
+    max-width: 450px;
     overflow: hidden;   /* clips number only */
     z-index: 2;
+    flex-shrink: 0;
 }
 
 .project-image img {
@@ -259,7 +260,6 @@ h3 {
     position: relative;
     width: 50%;
     padding: 40px;
-    height: 100%;
     transform: translateX(-75%);
     transition: transform 0.6s ease, opacity 0.6s ease;
     display: flex;
@@ -345,19 +345,28 @@ h3 {
         flex-direction: column;
     }
 
-    .project-image,
-    .project-info {
-        width: 100%;
-        position: relative;
-        transform: none !important;
+    .project-media {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-image-mask {
+        width: 90%;
     }
 
     .project-info {
-        padding: 20px;
-    }
-
-    .project-number {
-        transform: none;
+        width: 90%;
+        transform: translateX(0);
         opacity: 1;
+        margin-top: 20px;
+    }
+
+    .project-card:hover .project-image {
+        transform: none;
+    }
+
+    .project-card:hover .project-number {
+        transform: none;
+        opacity: 0.9;
     }
 }
