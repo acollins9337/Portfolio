@@ -203,12 +203,11 @@ h3 {
 }
 
 .project-card {
-    position: relative;
-    width: 100%;
-    margin-top: 20px;
     display: flex;
     justify-content: center; /* centers the card horizontally */
-    overflow: visible;
+    width: 100%;
+    margin-top: 20px;
+    overflow: visible;       /* allow the image to move without clipping */
 }
 
 .project-center {
@@ -220,16 +219,16 @@ h3 {
 .project-media {
     display: flex;
     align-items: stretch;
-    justify-content: flex-start; /* align image left, description right */
-    width: auto;                 /* shrink to fit children */
-    max-width: 900px;
+    width: auto;            /* shrink to fit image + info */
+    max-width: 900px;       /* optional max width */
     position: relative;
+    gap: 0;                 /* spacing between image & info handled by transforms */
 }
 
 .project-image-mask {
     position: relative;
-    width: 450px;      /* fixed image width */
-    overflow: hidden;  /* clips number only */
+    width: 450px;          /* fixed image width */
+    overflow: hidden;      /* clips only the number */
     z-index: 2;
     flex-shrink: 0;
 }
@@ -237,6 +236,7 @@ h3 {
 .project-image {
     width: 100%;
     transition: transform 0.6s ease;
+    position: relative;    /* needed for number positioning */
 }
 
 .project-image img {
@@ -265,20 +265,21 @@ h3 {
     transform: translateX(-75%);
     opacity: 0;
     transition: transform 0.6s ease, opacity 0.6s ease;
+    z-index: 1;
 }
 
-/* Hover effects */
+/* Hover Effects */
 .project-card:hover .project-image {
-    transform: translateX(-20%);
+    transform: translateX(-20%); /* image slides left */
 }
 
 .project-card:hover .project-number {
-    transform: translateX(120%);
+    transform: translateX(120%); /* number slides into image edge */
     opacity: 0;
 }
 
 .project-card:hover .project-info {
-    transform: translateX(0);
+    transform: translateX(0);     /* info slides out from behind image */
     opacity: 1;
 }
 
