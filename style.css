@@ -230,7 +230,7 @@ h3 {
 
 .project-image-mask {
     position: relative;
-    width: 30%;          /* fixed image width */
+    width: 400px;          /* fixed image width */
     z-index: 2;
     flex-shrink: 0;
 }
@@ -261,7 +261,7 @@ h3 {
 .project-info {
     position: absolute;
     left: 100%;
-    width: 100%;
+    width: 400px;
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -275,7 +275,7 @@ h3 {
 
 /* Hover Effects */
 .project-card:hover .project-image {
-    transform: translateX(-100%); /* image slides left */
+    transform: translateX(-400px); /* image slides left */
 }
 
 .project-card:hover .project-number {
@@ -284,8 +284,9 @@ h3 {
 }
 
 .project-card:hover .project-info {
+    transform: translateX(0px);     /* info slides out from behind image */
     opacity: 1;
-    width: 200%;
+    width: 800px;
 }
 
 @media (max-width: 768px) {
