@@ -227,8 +227,7 @@ h3 {
 
 .project-image-mask {
     position: relative;
-    width: 450px;          /* fixed image width */
-    overflow: hidden;      /* clips only the number */
+    width: 400px;          /* fixed image width */
     z-index: 2;
     flex-shrink: 0;
 }
@@ -257,7 +256,7 @@ h3 {
 }
 
 .project-info {
-    width: 50%;
+    width: 400px;
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -281,6 +280,7 @@ h3 {
 .project-card:hover .project-info {
     transform: translateX(0);     /* info slides out from behind image */
     opacity: 1;
+    width: 50%;
 }
 
 @media (max-width: 768px) {
