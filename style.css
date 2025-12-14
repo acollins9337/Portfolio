@@ -101,7 +101,7 @@ h3 {
     transform: scale(1.05);
     background-color: white;
     color: black;
-    box-shadow: 6px 6px 15px rgba(0,0,0,0.25);
+    box-shadow: 6px 6px 15px lightblue;
 }
 
 .nav-links a.active {
@@ -126,7 +126,7 @@ h3 {
 
 .link-tab a:hover {
     transform: scale(1.05);
-    box-shadow: 6px 6px 15px rgba(0,0,0,0.25);
+    box-shadow: lightblue;
 }
 
 /* icon */
@@ -143,8 +143,8 @@ h3 {
 }
 
 .content {
-    background-color: black;
-    box-shadow: 0 -15px 30px black;
+    background-color: #010312;
+    box-shadow: 0 -15px 30px #010312;
     border-radius: 16px;  
     width: 90%;
     margin: 30px auto;
@@ -163,7 +163,6 @@ h3 {
 .content .split {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     gap: 40px;              /* spacing between halves */
     width: 100%;
     margin: 40px 0;
@@ -188,6 +187,18 @@ h3 {
 
 .split-text.align-right {
     margin-left: auto;
+}
+
+.split-text.left {
+    text-align: left;
+}
+
+.split-text.right {
+    text-align: right;
+}
+
+.split-text.center {
+    text-align: center;
 }
 
 @media (max-width: 768px) {
