@@ -266,7 +266,7 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transform: translateX(-75%);
+    transform: translateX(-100%);
     opacity: 0;
     transition: transform 0.6s ease, opacity 0.6s ease, width 0.6s ease;
     z-index: 1;
@@ -275,7 +275,7 @@ h3 {
 
 /* Hover Effects */
 .project-card:hover .project-image {
-    transform: translateX(-20%); /* image slides left */
+    transform: translateX(-420px); /* image slides left */
 }
 
 .project-card:hover .project-number {
@@ -284,7 +284,7 @@ h3 {
 }
 
 .project-card:hover .project-info {
-    transform: translateX(0);     /* info slides out from behind image */
+    transform: translateX(620px);     /* info slides out from behind image */
     opacity: 1;
     width: 800px;
 }
