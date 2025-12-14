@@ -210,11 +210,19 @@ h3 {
     overflow: hidden;
 }
 
+.project-media {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+}
+
 .project-image {
     display: flex;
     position: relative;
+    z-index: 2;
     flex-shrink: 0;
-    max-width: 250px;
+    max-width: 450px;
     transition: transform 0.6s ease;
     margin-left: auto;
     margin-right: auto;
@@ -238,15 +246,17 @@ h3 {
 }
 
 .project-info {
+    z-index: 1;
+    position: relative;
     width: 40%;
     padding: 40px;
-    background: #040920;
     height: 100%;
     transform: translateX(-100%);
-    transition: transform 0.6s ease;
+    transition: transform 0.6s ease, opacity 0.6s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    opacity: 0.0;
 }
 
 .project-card:hover .project-image {
@@ -260,6 +270,7 @@ h3 {
 
 .project-card:hover .project-info {
     transform: translateX(0);
+    opacity: 1.0;
 }
 
 @media (max-width: 768px) {
