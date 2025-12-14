@@ -143,8 +143,8 @@ h3 {
 }
 
 .content {
-    background-color: #010312;
-    box-shadow: 0 -15px 30px #010312;
+    background-color: #040920;
+    box-shadow: 0 -15px 30px #040920;
     border-radius: 16px;  
     width: 90%;
     margin: 30px auto;
@@ -204,18 +204,20 @@ h3 {
 .project-card {
     position: relative;
     width: 100%;
-    max-width: 900px;
-    margin: 80px auto;
+    margin: 20px 10px;
     display: flex;
     align-items: center;
     overflow: hidden;
 }
 
 .project-image {
+    display: flex;
     position: relative;
     flex-shrink: 0;
-    width: 60%;
+    max-width: 250px;
     transition: transform 0.6s ease;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project-image img {
@@ -236,13 +238,11 @@ h3 {
 }
 
 .project-info {
-    position: absolute;
-    right: 0;
     width: 40%;
     padding: 40px;
-    background: #010312;
+    background: #040920;
     height: 100%;
-    transform: translateX(100%);
+    transform: translateX(-100%);
     transition: transform 0.6s ease;
     display: flex;
     flex-direction: column;
