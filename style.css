@@ -5,10 +5,15 @@ body {
     line-height: 1.6;
     width: 100%;
     background-image: url("nav_background.png");
-    background-size: 120% auto;      /* image fills navbar */
+    background-size: 100% auto;      /* image fills navbar */
     background-position: center; /* keeps image centered */
-    animation: bg-pan 40s linear infinite;              /* readable spacing */
+    animation: bg-pan 20s linear infinite;              /* readable spacing */
     font-size: 1.25rem;
+}
+
+@keyframes bg-pan {
+    0%   { background-position: 0% 0%; }
+    100%  { background-position: 100% 100%; }
 }
 
 h1, h2, h3 {
@@ -49,12 +54,6 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-}
-
-@keyframes bg-pan {
-    0%   { background-position: 50% 50%; }
-    50%  { background-position: 50% 35%; }  /* tiny drift */
-    100% { background-position: 50% 50%; }
 }
 
 .name-tab {
@@ -143,8 +142,8 @@ h3 {
 }
 
 .content {
-    background-color: #040920;
-    box-shadow: 0 -15px 30px #040920;
+    background-color: #030718;
+    box-shadow: 0 -15px 30px #030718;
     border-radius: 16px;  
     width: 90%;
     margin: 30px auto;
