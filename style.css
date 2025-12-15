@@ -4,9 +4,10 @@ body {
     color: white;                   /* default text color */
     line-height: 1.6;
     width: 100%;
-    background-image: url("nav_background.png");
+    background-image: url("nav_bg_2.png");
     background-size: 100% auto;      /* image fills navbar */
     background-position: center; /* keeps image centered */
+    background-repeat: repeat-y;
     animation: bg-pan 20s linear infinite;              /* readable spacing */
     font-size: 1.25rem;
 }
