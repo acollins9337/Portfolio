@@ -141,7 +141,8 @@ h3 {
     margin-left: auto;
     display: flex;
     align-items: center;
-    padding: 0 10px 0 0; 
+    padding: 0 10px 0 0;
+    gap: 25px; 
 }
 
 .link-tab a {
@@ -149,6 +150,7 @@ h3 {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     text-decoration: none; /* ensures no underline */
     display: flex;
+    border-radius: 3px;
 }
 
 .link-tab a:hover {
