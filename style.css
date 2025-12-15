@@ -1,20 +1,34 @@
 body {
-    margin: 0;                     /* remove default page margin */
-    font-family: "Inter", system-ui, sans-serif;       /* default font */
-    color: white;                   /* default text color */
+    margin: 0;
+    font-family: "Inter", system-ui, sans-serif;
+    color: white;
     line-height: 1.6;
-    width: 100%;
-    background-image: url("nav_bg_2.png");
-    background-size: 100% auto;      /* image fills navbar */
-    background-position: center; /* keeps image centered */
-    background-repeat: repeat-y;
-    animation: bg-pan 20s linear infinite;              /* readable spacing */
     font-size: 1.25rem;
+    overflow-x: hidden;
+    background-color: #030718; /* fallback */
 }
 
+/* animated background layer */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("nav_bg_2.png");
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    background-position: 0 0;
+    animation: bg-pan 20s linear infinite;
+    z-index: -1;
+}
+
+/* seamless vertical loop */
 @keyframes bg-pan {
-    0%   { background-position: 0% 0%; }
-    100%  { background-position: 100% 100%; }
+    from {
+        background-position-y: 0;
+    }
+    to {
+        background-position-y: 100%;
+    }
 }
 
 h1, h2, h3 {
