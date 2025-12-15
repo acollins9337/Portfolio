@@ -23,9 +23,9 @@ body::before {
 
 /* seamless vertical loop */
 @keyframes bg-pan {
-  0%   { background-position-y: 25%; }
-  50%  { background-position-y: 75%; }
-  100% { background-position-y: 25%; }
+  0%   { background-position-y: 35%; }
+  50%  { background-position-y: 0%; }
+  100% { background-position-y: 35%; }
 }
 
 h1, h2, h3 {
