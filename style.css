@@ -186,7 +186,6 @@ h3 {
 .content .wide {
     margin: 40px auto;
     width: 90%;
-    border: 2px solid red;
 }
 
 .content .wide:hover h1{
@@ -203,7 +202,6 @@ h3 {
     justify-content: space-between;
     gap: 40px;              /* spacing between halves */
     margin: 40px 30px;
-    border: 2px solid yellowgreen;
 }
 
 .content .split:hover h1{
@@ -224,7 +222,6 @@ h3 {
 .split-text {
     flex: 1 1 auto;         /* text expands into remaining space */
     min-width: 200px;       /* optional for readability */
-    border: 2px solid lightblue;
 }
 
 .split-text.align-left {
