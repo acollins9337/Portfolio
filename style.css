@@ -206,6 +206,7 @@ h3 {
     justify-content: flex-start;
     gap: 40px;              /* spacing between halves */
     margin: 15px 30px;
+    align-items: center;
 }
 
 .content .split:hover h1{
@@ -216,7 +217,7 @@ h3 {
     width: 100%
 }
 
-.img_container {
+.img-container {
     flex: 0 0 auto;
     max-width: 450px;
 }
