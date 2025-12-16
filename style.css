@@ -44,7 +44,8 @@ h1 {
     transition: font-size 0.6s ease;
 }
 
-h1::after{
+h1::after,
+h2::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -192,11 +193,13 @@ h3 {
     width: 90%;
 }
 
-.content .wide:hover h1{
+.content .wide:hover h1, 
+.content.wide:hover h2{
     transform: scale(1.03);
 }
 
-.content .wide:hover h1::after{
+.content .wide:hover h1::after, 
+.content .wide:hover h2::after{
     width: 100%;
 }
 
@@ -209,11 +212,13 @@ h3 {
     align-items: center;
 }
 
-.content .split:hover h1{
+.content .split:hover h1, 
+.content .split:hover h2{
     transform: scale(1.03)
 }
 
-.content .split:hover h1::after{
+.content .split:hover h1::after, 
+.content .split:hover h2::after{
     width: 100%
 }
 
