@@ -186,7 +186,7 @@ h3 {
 }
 
 .content .wide {
-    margin: 40px auto;
+    margin: 25px auto;
     width: 90%;
     border: 2px solid greenyellow;
 }
@@ -202,7 +202,7 @@ h3 {
 .content .split {
     width: 90%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 40px;              /* spacing between halves */
     margin: 40px 30px;
     border: 2px solid red;
@@ -216,10 +216,14 @@ h3 {
     width: 100%
 }
 
-.img-container img {
+.img_container {
+    flex: 0 0 auto;
     max-width: 450px;
+}
+
+.img-container img {
+    width: 100%;
     height: auto;
-    display: block;
     border-radius: 8px;
 }
 
