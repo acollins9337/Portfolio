@@ -231,6 +231,7 @@ h3 {
 .split-text {
     flex: 1 1 auto;         /* text expands into remaining space */
     min-width: 200px;       /* optional for readability */
+    height: auto;
 }
 
 .split-text.align-left {
