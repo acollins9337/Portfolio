@@ -41,7 +41,6 @@ h1, h2, h3 {
 h1 {
     font-size: 3.7rem;
     font-weight: 700;
-    transition: font-size 0.6s ease;
 }
 
 h1::after,
@@ -193,11 +192,6 @@ h3 {
     width: 90%;
 }
 
-.content .wide:hover h1, 
-.content.wide:hover h2{
-    transform: scale(1.03);
-}
-
 .content .wide:hover h1::after, 
 .content .wide:hover h2::after{
     width: 100%;
@@ -210,11 +204,6 @@ h3 {
     gap: 40px;              /* spacing between halves */
     margin: 15px 30px;
     align-items: center;
-}
-
-.content .split:hover h1, 
-.content .split:hover h2{
-    transform: scale(1.03)
 }
 
 .content .split:hover h1::after, 
