@@ -279,11 +279,11 @@ h3 {
     width: 400px;          /* fixed image width */
     z-index: 2;
     flex-shrink: 0;
+    transition: transform 0.6s ease;
 }
 
 .project-image {
     width: 100%;
-    transition: transform 0.6s ease;
     position: relative;    /* needed for number positioning */
     display: none;
 }
@@ -324,7 +324,7 @@ h3 {
 }
 
 /* Hover Effects */
-.project-card:hover .project-image {
+.project-card:hover .project-image-mask {
     transform: translateX(-100%); /* image slides left */
 }
 
