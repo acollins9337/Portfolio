@@ -303,11 +303,11 @@ h3 {
     border-radius: 12px;
 }
 
-.project-number {
+.project-caption {
     position: absolute;
     bottom: 16px;
     left: 16px;
-    font-size: 3rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: white;
     opacity: 0.9;
