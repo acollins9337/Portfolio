@@ -288,7 +288,7 @@ h3 {
     display: none;
 }
 
-.project-image .active{
+.project-image.active{
     display: block;
 }
 
