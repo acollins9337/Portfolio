@@ -277,9 +277,11 @@ h3 {
 .project-image-mask {
     position: relative;
     width: 400px;          /* fixed image width */
+    height: auto;
     z-index: 2;
     flex-shrink: 0;
     transition: transform 0.6s ease;
+    border-radius: 12px;
 }
 
 .project-image {
