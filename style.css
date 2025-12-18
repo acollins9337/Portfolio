@@ -268,7 +268,7 @@ h3 {
 
 .project-media {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     width: auto;            /* shrink to fit image + info */
     position: relative;
     gap: 0;                 /* spacing between image & info handled by transforms */
