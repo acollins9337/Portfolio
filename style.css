@@ -310,19 +310,22 @@ h3 {
     font-weight: 700;
     font-style: italic;
     color: black;
+    background-color: white;
+    border-radius: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
     opacity: 0.9;
     transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 .project-image-mask button {
     position: absolute;
-    bottom: 16px;
-    transform: translateY(-50%);
+    top: 50%;
     color: white;
-    text-shadow: 0 0 4px black;
+    background-color: black;
     border: none;
-    font-size: 2rem;
-    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 2.5rem;
     cursor: pointer;
     z-index: 2;
 }
@@ -330,13 +333,13 @@ h3 {
 .prev {
     left: 16px;
     opacity: 0;
-    transition: opacity 0.6s ease;
+    transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 .next {
     right: 16px;
     opacity: 0;
-    transition: opacity 0.6s ease;
+    transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 .project-info {
@@ -374,6 +377,14 @@ h3 {
 
 .project-card:hover .next {
     opacity: 1;
+}
+
+.project-card:hover .prev:hover {
+    transform: scale(1.1);
+}
+
+.project-card:hover .next:hover {
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
