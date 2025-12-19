@@ -314,6 +314,31 @@ h3 {
     transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
+.project-image-mask button {
+    position: absolute;
+    bottom: 16px;
+    transform: translateY(-50%);
+    color: white;
+    text-shadow: 0 0 4px black;
+    border: none;
+    font-size: 2rem;
+    padding: 6px 12px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev {
+    left: 16px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.next {
+    right: 16px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
 .project-info {
     position: absolute;
     left: 100%;
@@ -340,6 +365,14 @@ h3 {
 
 .project-card:hover .project-info {
     transform: translateX(-30%);     /* info slides out from behind image */
+    opacity: 1;
+}
+
+.project-card:hover .prev {
+    opacity: 1;
+}
+
+.project-card:hover .next {
     opacity: 1;
 }
 
