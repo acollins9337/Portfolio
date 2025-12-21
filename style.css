@@ -388,7 +388,7 @@ h3 {
     transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
     /* Global safety */
     *, *::before, *::after {
@@ -531,17 +531,6 @@ h3 {
     .project-card:hover .project-info {
         transform: none;
         opacity: 1;
-    }
-}
-
-@media (hover: none) and (pointer: coarse) {
-    .project-card:hover .project-image-mask,
-    .project-card:hover .project-caption,
-    .project-card:hover .project-info,
-    .project-card:hover .prev,
-    .project-card:hover .next {
-        transform: none !important;
-        opacity: 1 !important;
     }
 }
 
