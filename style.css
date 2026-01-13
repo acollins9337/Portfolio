@@ -359,7 +359,7 @@ h3 {
 
 /* Hover Effects */
 .project-card:hover .project-image-mask {
-    transform: translateX(-100%); /* image slides left */
+    transform: translateX(-85%); /* image slides left */
 }
 
 .project-card:hover .project-caption {
@@ -368,7 +368,7 @@ h3 {
 }
 
 .project-card:hover .project-info {
-    transform: translateX(-30%);     /* info slides out from behind image */
+    transform: translateX(-40%);     /* info slides out from behind image */
     opacity: 1;
 }
 
