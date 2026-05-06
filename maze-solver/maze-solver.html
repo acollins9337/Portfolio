@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maze-solver</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar-container">
+        <div class="navbar">
+            <div class="nav-links">
+                <a href="../index.html">AC</a>
+                <a href="../experience.html">EXPERIENCE</a>
+                <a href="../projects.html">PROJECTS</a>
+            </div>
+            <div class="link-tab">
+                <a href="https://www.linkedin.com/in/andrew-collins-bsme-msrobo/" target="_blank">
+                    <img src="../misc_img/linkedin.png" alt="LinkedIn" class="icon">
+                </a>
+                <a href="https://github.com/acollins9337" target="_blank">
+                    <img src="../misc_img/github.png" alt="github" class="icon">
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        <div class="wide">
+            <div class="fontbox"><h1>ROS2 Autonomous Maze Solver</h1></div>
+        </div>
+
+        <div class="split">
+            <div class="img-container" style="max-width: 350px;">
+                <img src="tb3.jpg" alt="Grad-1">
+            </div>
+            <div class="split-text left align-left">
+                <div class="fontbox">
+                    <p>
+                        I spent some time working with a partner on a software package to solve a simple maze. 
+                        The maze was constructed such that signs on the walls pointed the way to the goal, 
+                        and were key to solving the maze. My partner and I created a ROS2/Python package to solve 
+                        the maze by using machine and ROS2 Nav2. A simple conditional state machine controlled the robots behavior.
+                        The robot would default to moving forwards if the path was unobstructed. If the forward path was obstructed, it would
+                        attempt to classify the sign on the wall in front of it. It would then turn according to the classified command (left, right, 180).
+                        Fallback behaviors were included in the case of bad readings or incorrect positioning.                  
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="wide">
+            <div class="fontbox">
+                <p>
+                    Our final submission achieved 90% sign classification accuracy, 
+                    and was able to complete the maze properly and without error in 5/6 tests. The code we used can 
+                    be seen in my Github.
+                </p>
+            </div>
+        </div>
+            
+            
+
+    </div>
+</body>
+</html>

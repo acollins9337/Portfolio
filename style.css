@@ -350,11 +350,34 @@ h3 {
     width: 150%;
     padding: 40px;
     display: flex;
+    gap: 16px;
     flex-direction: column;
     justify-content: center;
     opacity: 0;
     transition: transform 0.6s ease, opacity 0.6s ease;
     z-index: 1;
+}
+
+.project-info a{
+    text-decoration: none; 
+}
+
+.project-info button{
+    display: block;
+    color: black;
+    background-color: white; 
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-style: italic;
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    padding: 8px 8px;
+}
+
+.project-info:hover button:hover {
+    transform: scale(1.1);
 }
 
 /* Hover Effects */
@@ -504,7 +527,16 @@ h3 {
         opacity: 1;
         padding: 10px 0 0 0;
         text-align: center;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;   /* <-- THIS is what makes spacing clean */
+    }
+
+    .project-info button {
+        position: static;
+        display: inline-block;
+        width: fit-content;
     }
 
     .project-card,
