@@ -11,9 +11,9 @@
     <nav class="navbar-container">
         <div class="navbar">
             <div class="nav-links">
-                <a href="../index.html">AC</a>
-                <a href="../experience.html">EXPERIENCE</a>
-                <a href="../projects.html">PROJECTS</a>
+                <a href="../index.html">Home</a>
+                <!-- <a href="../experience.html">EXPERIENCE</a> -->
+                <a href="../projects.html">Projects</a>
             </div>
             <div class="link-tab">
                 <a href="https://www.linkedin.com/in/andrew-collins-bsme-msrobo/" target="_blank">
@@ -46,11 +46,34 @@
                         attempt to classify the sign on the wall in front of it. It would then turn according to the classified command (left, right, 180).
                         Fallback behaviors were included in the case of bad readings or incorrect positioning.                  
                     </p> -->
-
+                    
                     <p>
-                        The goal of our project was to develop a ROS2 software package for a TurtleBot3 that 
+                        The goal of our project was to develop a ROS2 software package for a TurtleBot3 that could solve a simple maze. Each wall of the maze
+                        had a sign that pointed in the direction the robot should go to solve the maze. Signs were spaced apart such that the maze could be generalized
+                        as gird made up of 3'x3' cells. We had control of the robot's initial orientation,
+                        but once the robot was placed it had to complete the maze fully autonomously. We discussed several ideas to make this work, including
+                        a bug algorithm based design, a simple "always turn right" strategy, or a ROS2 Nav2 based package.
                     </p>
                 </div>
+            </div>
+        </div>
+        <div class="split">
+            <div class="split-text left align-right">
+                <div class="fontbox">
+                    <p>
+                    We selected the Nav2 based package because it gave us the most versatility. We created a simple state machine to control the behavior of the robot
+                    and trained a KNN classifier for the signs. The robot defaulted to a forward motion if the path was not obstructed and only tried classification when
+                    the forward path was obstructed. If classification was successful, a Nav2 rotational waypoint would be placed in the direction of the next target cell (left, right, or backwards).
+                    Once the new heading was reached, forward motion would resume. If classification failed, fallback procedures were created. The robot could adjust its distance to the sign to attempt a better reading. If it couldn't
+                    get a better reading within a certain number of attempts, it would default to turning left (the optimal guess given the structure of the maze).
+                    A simple PID controller for the wheel output velocity was used as a low level controller.
+                </p>
+                </div>
+            </div>
+            <div class="img-container">
+                <video controls muted>
+                    <source src="Maze_Solver_demo.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
 
@@ -58,17 +81,20 @@
             <div class="fontbox">
                 <p>
                     Our final submission achieved 90% sign classification accuracy, 
-                    and was able to complete the maze properly and without error in 5/6 tests. The code we used can 
-                    be seen in my Github.
+                    and was able to complete the maze properly and without misclassification in 5/6 tests from multiple starting locations. Given more time,
+                    we would try to imrpove the accuracy of our KNN model under different lighting conditions, and would further try to reduce the movement error in the system.
+                </p>
+
+                <div class="button-row">
                     <a href="https://drive.google.com/file/d/1bQyFHiut4lzOyRqMV77JY2_4YbZbNOax/view?usp=sharing">
                         <button>Demo Video</button>
                     </a>
-                </p>
+                    <a href="https://github.com/acollins9337/ROS2_Maze_Solver">
+                        <button>Code</button>
+                    </a>
+                </div>
             </div>
         </div>
-            
-            
-
     </div>
 </body>
 </html>

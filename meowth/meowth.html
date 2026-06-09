@@ -11,9 +11,9 @@
     <nav class="navbar-container">
         <div class="navbar">
             <div class="nav-links">
-                <a href="../index.html">AC</a>
-                <a href="../experience.html">EXPERIENCE</a>
-                <a href="../projects.html">PROJECTS</a>
+                <a href="../index.html">Home</a>
+                <!-- <a href="../experience.html">EXPERIENCE</a> -->
+                <a href="../projects.html">Projects</a>
             </div>
             <div class="link-tab">
                 <a href="https://www.linkedin.com/in/andrew-collins-bsme-msrobo/" target="_blank">
@@ -31,12 +31,12 @@
             <div class="fontbox"><h1>VEXU Robot "Meowth"</h1></div>
         </div>
         <div class="split">
-            <div class="img-container" style="max-width: 350px;">
-                <img src="meowth.png" alt="meowth">
+            <div class="img-container" style="max-width: 400px;">
+                <img src="meowth2 title.jpg" alt="meowth">
             </div>
             <div class="split-text left align-left">
                 <div class="fontbox">
-                    <p>
+                    <!-- <p>
                         I worked closely with my team
                         and designed this over the course of an entire school year. It includes numerous subsystems, such as the drivetrain, the intake,
                         the linear-launcher, and the winch release. Perhaps the highlight of the build is the winch release
@@ -45,10 +45,68 @@
                         The linear launcher system that my team and I developed gave the robot
                         a near perfect disk grouping that minimized the number of missed disks, and qualified our team for the World Championships.
                         See the VEX Robotics Spin Up game reveal for more information.
+                    </p> -->
+                    <p>
+                        The goal of this project was to create a robot specifically for the Skills (individual robot) challenge of the VEXU SpinUp game, where robots had to 
+                        launch discs into goals, much like frisbee golf. Robots were to obtain the discs from the ground and were not allowed to hold more than three
+                        at any given time. Much of my rolewas to design and test mechanical components and ensure smooth integration with the programming team. My team successfully qualified
+                        for the VEX Robotics World Championships this year, along with our head-to-head match sister teams.
+                    </p>
+                    <h3>Hardware</h3>
+                    <p>
+                        Most robot designs this year used flywheel
+                        launcher systems, because they could be loaded and launched quickly, with less emphasis on accuracy and more emphasis on volume.
+                        Since the skills challenge had a lower time limit (1 minute) and did have the concerns about defense from an opposing team, accuracy was paramount.
+                        We decided to use a linear slider launcher to maintain high accuracy and keep disc groupings tight.
                     </p>
                 </div>
             </div>
             
+        </div>
+        <div class="split">
+            <div class="split-text left align-left">
+                <div class="fontbox">
+                    <p>
+                        The primary issue with the linear launcher method was how to avoid motor back spin. A direct linkage would require the launcher elastics to
+                        have to spin the motors in reverse to launch, slowing launch velocity and potentially damaging the electronics. Many similar catapult style systems
+                        used slip-gears, or gears missing teeth, but this did not give us fine control over when we launched the disks. We instead decided on a 
+                        pneumatic lever release system, which could physically separate the gears connecting the motor to the winch. Doing so gave us fine control 
+                        over the launch while avoiding motor back spin. Any issues with re-meshing the gears could be avoided by having gears with large teeth.
+                    </p>
+                </div>
+            </div>
+            <div class="img-container" style="max-width: 300px;" >
+                <img src="meowth6.jpg" alt="meowth">
+            </div>
+            <div class="img-container" style="max-width: 300px;">
+                <img src="meowth7.jpg" alt="meowth">
+            </div>
+        </div>
+        <div class="split">
+            <div class="img-container" style="max-width: 300px;" >
+                <img src="meowth3.jpg" alt="meowth">
+            </div>
+            <div class="img-container" style="max-width: 300px;" >
+                <img src="meowth5.jpg" alt="meowth">
+            </div>
+            <div class="fontbox">
+                <p>
+                    The intake system was a linked horizontal intake system. This allowed the robot to easily pick up the flat discs from the floor and deposit them 
+                    directly into the basket of the linear launcher. Multiple tiers of intake were created, such that the lowest tiers spun the fastest, and the higher 
+                    tiers spun the slowest, to prevent overshooting the basket while the robot was moving.
+                </p>
+            </div>
+        </div>
+        <div class="wide">
+            <div class="fontbox">
+                <h3>Sensing and Programming</h3>
+                <p>
+                    All Vex V5 motors come preequipped with encoders, which we supplemented with an IMU. We implemented odometry and PD control to ensure
+                    movement accuracy when performing autonomous runs. Since VEX fields are relatively small and VEX's GPS sensors are generally unreliable, autonomous runs relied on dead reckoning
+                    to move around. The launcher mechanism was soft-limited to a paricular draw distance in the code to prevent 
+                    over drawing. Various preset draw distances were allowed so human operators could quickly select how much power they wanted to use.
+                </p>
+            </div>
         </div>
     </div>
 </body>

@@ -11,9 +11,9 @@
     <nav class="navbar-container">
         <div class="navbar">
             <div class="nav-links">
-                <a href="../index.html">AC</a>
-                <a href="../experience.html">EXPERIENCE</a>
-                <a href="../projects.html">PROJECTS</a>
+                <a href="../index.html">Home</a>
+                <!-- <a href="../experience.html">EXPERIENCE</a> -->
+                <a href="../projects.html">Projects</a>
             </div>
             <div class="link-tab">
                 <a href="https://www.linkedin.com/in/andrew-collins-bsme-msrobo/" target="_blank">
@@ -28,15 +28,23 @@
     
     <div class="content">
         <div class="wide">
-            <div class="fontbox"><h1>Fluor CIP Skid</h1></div>
+            <div class="fontbox">
+                <h1>Fluor CIP Skid</h1>
+                <p>
+                    The goal of this project was to a design a Clean-In-Place Skid system to specifications laid out by the Fluor Corporation.
+                    I worked closely with a team of seven other mechanical engineering students to produce both a conceptual design and a prototype design.
+                    Most of my work was on the conceptual design, focusing on CAD modeling, thermodynamic calculations, and component research. The design we submitted
+                    came in second at a showcase for five different teams from different schools also doing the same project, only barely behind one other team from Clemson.
+                </p>
+            </div>
         </div>
         <div class="split">
-            <div class="img-container" style="max-width: 350px;">
+            <div class="img-container">
                 <img src="skid.jpeg" alt="skid">
             </div>
             <div class="split-text left align-left">
                 <div class="fontbox">
-                    <p>
+                    <!-- <p>
                         I worked with a team of seven other Clemson ME students to design a Clean-In-Place Skid system to 
                         specifications laid out by the Fluor Corporation. I focused heavily on the conceptual design side of the project, 
                         doing much of my work in the areas of CAD design, flow and heat calculations, and equipment purchasing. 
@@ -44,10 +52,40 @@
                         the advisors at Clemson, and any suppliers we spoke with. Our final design included a second heat exchanger to recycle
                         heat from the primary heat exchanger, and three pumps to allow for maximum flow rate control. Our design came in second
                         at a showcase involving other universities.
+                    </p> -->
+                    <h3>Conceptual Design</h3>
+                    <p>
+                        Our conceptual system was required to comply with all FDA and ASME standards while being a CIP system that could be feasibly
+                        implemented in a factory. We focused on versatility, with the intent that the system could be used across a wide variety of factories.
+                        As such, we utilised a three pump system to maintain efficient performace across a range of flow rates without exceeding the optimal operating
+                        ranges for any one pump. Both the rinse tank and recovery tanks were 1000 gallons to allow for the cleaning of large systems. We were given steam as a system inpit
+                        so to improve the
+                        system's efficiency, we chose to use two heat exchangers. One heat exchanger acted as the primary heat exchanger, utilizing the energy from the first phase
+                        change of the steam to heat the working fluid. The then condensed steam then passed through a steam trap to cause a pressure drop, and then through a 
+                        secondary heat exchanger to extract the energy from an additional phase change. This allowed us to fully raise the temperature of the working fluid 
+                        in fewer total cycles, at the price of a higher system cost. Control would be performed by a PLC, as with many other CIP systems.
                     </p>
                 </div>
             </div>
-            
+        </div>
+        <div class="split">
+            <div class="split-text left align-left">
+                <div class="fontbox">
+                    <h3>Prototype Design</h3>
+                    <p>
+                       Our prototype design was meant to mimic out conceptual design, without meeting the rigorous requirements for real pharmaceutical CIP systems
+                       To replace the conceptual dual pump system, we used a set of flow limiter valves that we could switch between, mimicing the range of flow rates
+                       enabled by having multiple pumps. Electric heat exchangers were used rather than steam, since steam was not available for the prototypes. This mimiced the 
+                       two heat exchanger system used in our conceptual design. A transformer
+                       was used to account for the voltage differences between the heat exchangers and the rest of the system. A PLC controlled the entire system, autonomously
+                       operating all valves and relays necessary to run a complete cycle. Our design successfully achieved two flow rates and raised the temperature of the
+                       input water by about five degrees Farenheit. 
+                    </p>
+                </div>
+            </div>
+            <div class="img-container">
+                <img src="proto2.JPG" alt="skid">
+            </div>
         </div>
     </div>
 </body>

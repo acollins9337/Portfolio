@@ -43,8 +43,7 @@ h1 {
     display: block;
 }
 
-h1::after,
-h2::after {
+h1::after{
     content: "";
     position: absolute;
     left: 50%;
@@ -195,20 +194,31 @@ h3 {
     height: auto;
 }
 
+.button-row
+{
+    display: flex;
+    width: 100%;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
 .fontbox button{
     display: block;
     color: black;
     background-color: white; 
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-style: italic;
     cursor: pointer;
     z-index: 2;
     transition: transform 0.6s ease, opacity 0.6s ease;
     padding: 8px 8px;
     transition: transform 0.2s ease;
-    margin:auto;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .fontbox a{
@@ -240,14 +250,42 @@ h3 {
 }
 
 .img-container {
+    position: relative;
     flex: 0 0 auto;
-    max-width: 450px;
+    max-width: 50%;
 }
 
 .img-container img {
     width: 100%;
     height: auto;
     border-radius: 8px;
+}
+
+.img-container video{
+    width:100%;
+    height:auto;
+    border-radius: 8px;
+}
+
+.img-cap {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+    padding-left: 6px;
+    padding-right: 7px;
+    opacity: 0.9;
+}
+
+.split-img{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20%;
 }
 
 .split-text {
