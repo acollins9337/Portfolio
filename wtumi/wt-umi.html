@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WT-UMI</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar-container">
+        <div class="navbar">
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <!-- <a href="../experience.html">EXPERIENCE</a> -->
+                <a href="../projects.html">Projects</a>
+            </div>
+            <div class="link-tab">
+                <a href="https://www.linkedin.com/in/andrew-collins-bsme-msrobo/" target="_blank">
+                    <img src="../misc_img/linkedin.png" alt="LinkedIn" class="icon">
+                </a>
+                <a href="https://github.com/acollins9337" target="_blank">
+                    <img src="../misc_img/github.png" alt="github" class="icon">
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        <div class="wide">
+            <div class="fontbox">
+                <h1>Whole Body Tactile Universal Manipulation Interface</h1>
+                <p>
+                   While working with the Georgia Tech LIDAR group I was able to contribute to a project focusing on using tactile sensors
+                   on more than just the hands of humanoid robots, trying to ascertain whether it was useful for improving manipulation control. I contributed
+                   to the project hardware and sensing integration. We submitted to CoRL and are waiting to hear back.
+                </p>
+            </div>
+        </div>
+        <div class="split">
+            <div class="img-container" style="max-width: 400px;">
+                <img src="ball.png" alt="">
+            </div>
+            <div class="split-text left align-left">
+                <div class="fontbox">
+                    <p>
+                        We tested the robot on five different tasks throughout the project: yogaball rotation, bucket rotation, pillow rotation, beam carrying, and 
+                        table carrying. I was directly involved with the design and fabrication of the sensing hardware used throughout the project. We used thin film 
+                        tactile sensors on modular and removable 3D printed components. This allowed us to have a highly versatile kit of swappable tactile hardware that
+                        we could use to cover the hands, chest, and forearms of the UNITREE G1 we were using. I also contributed to the integration of these pieces of hardware
+                        into the software used by the team. This included calibration and datagathering about the sensors, developing and tweaking sensor pipelines and drivers,
+                        and setting up ROS2 integrations.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="split">
+            <div class="split-text left align-left">
+                <div class="fontbox">
+                    <p>
+                        The overall system pipleine takes tactile readings, robot sensor data, and target end effector positions. Part of the goal of the project
+                        was to use predominantly human-gathered data when training the robot's action planner, so corrections needed to be made to ensure that the 
+                        correct motions would be completed. A multilayer pretrained pose correction system was implemented to deal with this. The corrected target pose 
+                        were used in a force-aware planner, that used a ViT encoder and a diffusion policy basis to plan future robot trajectories.
+                    </p>
+                </div>
+            </div>
+            <div class="img-container">
+                <img src="beam.png" alt="">
+            </div>
+        </div>
+        <div class="split">
+            <div class="img-container" style="max-width: 400px;">
+                <img src="can.png" alt="">
+            </div>
+            <div class="split-text left align-left">
+                <div class="fontbox">
+                    <p>
+                        An admittance controller and an IK controller were used to convert the planned trajectories into actual achievable motions, while still
+                        being aware of perturbations. Low level control was handled bu joint-level PD controllers. Overall, the final pipeline was successful at proving that
+                        adjusted human data could be used to train a control policy, and that tactile sensing was useful for maintaining contact
+                        in manipulation tasks.
+                    </p>
+                    <div class="button-row">
+                        <a href="https://wt-umi.github.io/WTUMI/">
+                            <button>Project Page</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
