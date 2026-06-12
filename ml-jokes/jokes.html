@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicting Humor</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar-container">
+        <div class="navbar">
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <!-- <a href="../experience.html">EXPERIENCE</a> -->
+                <a href="../projects.html">Projects</a>
+            </div>
+            <div class="link-tab">
+                <a href="https://www.linkedin.com/in/andrew-collins-bsme-msrobo/" target="_blank">
+                    <img src="../misc_img/linkedin.png" alt="LinkedIn" class="icon">
+                </a>
+                <a href="https://github.com/acollins9337" target="_blank">
+                    <img src="../misc_img/github.png" alt="github" class="icon">
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        <div class="wide">
+            <div class="fontbox">
+                <h1>Predicting Humor with Machine Learning</h1>
+                <p>
+                    Our goal with this project was to take the r/jokes dataset that we had selected and see if we could use it to predict whether a joke 
+                    would be successful, or viral, using the joke text itself and the Reddit scores associated with them. To improve our chances of getting 
+                    useful results, we did some simple preprocessing to prepare the entire dataset. This included removing jokes that had missing headings, text,
+                    or scores and removing whitespacing, capitals, and stopwords. We saved the number of capitals and punctuation marks in the event they were useful.
+                    Each methods used a unique form of tokenization as part of their preprocessing. HDBSCAN used Glove embeddings, since they were already pretrained.
+                    SVM and logistic regression used word2vec to extract possible new meanings from the jokes.
+                </p>
+            </div>
+        </div>
+        <div class="split">
+            <div class="img-container" style="max-width: 400px;">
+                <img src="HDBSCAN.jpg" alt="meowth">
+            </div>
+            <div class="split-text left align-left">
+                <div class="fontbox">
+                    Overall, HDB scan was out most successful algorithm. It was able to cluster jokes into clear categories, that seemed to follow logical trends
+                    in jokes, such as "lightbulb" jokes, and "knock-knock" jokes.
+                </div>
+            </div>
+        </div>
+        <div class="split">
+            <div class="split-text left align-left">
+                <div class="fontbox">
+                    Our first attempt at predicting whether or not unseen jokes would go viral using SVM was not successful. The dataset we used had a very low number
+                    of truly viral jokes compared to the total number. Even after applying SMOTE techniques, the dataset regulary over predicted the non-viral class simply
+                    because that was the vast majority of what is was trained on. This also implies that the dataset was not linearly separable even under the radial basis function
+                    kernel that was used.
+                </div>
+            </div>
+            <div class="img-container">
+                <img src="SVMNumericalResults.png" alt="meowth">
+            </div>
+        </div>
+        <div class="split">
+            <div class="img-container" style="max-width: 400px;">
+                <img src="LinearRegressionPredictedvsActual.png" alt="meowth">
+            </div>
+            <div class="split-text left align-left">
+                <div class="fontbox">
+                    Our second attempt, with logistic regression, was more successful but still did not achieve the desired goal. Regression still struggled to account
+                    for the fact that most of the dataset was not viral, even though we were trying regression rather than pure classification like with SVM. The regression
+                    model achieved better accuracy on the test dataset than the SVM model did, but overall it was still poor.
+                </div>
+            </div>
+        </div>
+        <div class="wide">
+            <div class="fontbox">
+                <p>
+                    The lack of strong results of this project highlight the difficulty of approaching NLP tasks. Future work could include applying multiple layers
+                    of models to the data, using new preprocessing methods, or using a different tokenization method. Had the project been successful, we could feasibly see
+                    its concepts being applied to marketing analytics and online advertising. While we were not successful at achieving our original goal, this project was 
+                    overall a useful learning experience.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

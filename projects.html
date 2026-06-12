@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROJECTS</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -26,6 +26,39 @@
         </div>
     </nav>
     <div class ="content">
+        <!--Calculation is height*(450/width)-->
+        <div class="project-card" style="height: 398px;">
+            <div class="project-center">
+                <div class="project-media">
+
+                    <div class="project-image-mask">
+                        <!-- <img src="meowth/meowth.png" class ="project-image active" alt=""> -->
+                        <img src="ml-jokes/svm.png" class="project-image active" alt="">
+                        <img src="ml-jokes/HDBSCAN.jpg" class ="project-image" alt="">
+                        <img src="ml-jokes/SVMNumericalResults.png" class="project-image" alt="">
+                        <span class="project-caption">Humor Predictor</span>
+                        <button class="prev">&lt;</button>
+                        <button class="next">&gt;</button>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Predicting Humor with Machine Learning</h3>
+                        <p>
+                            For the final project of my Machine Learning course I worked with four other Georgia Tech students to 
+                            apply machine learning techniques to attempt to predict whether jokes would be considered funny. Using a dataset
+                            of one-million jokes from the r/jokes subreddit we clustered the jokes with HDBSCAN and then applied SVM and logistic 
+                            regression to help us make inferences on unseen jokes. While our final pipeline may have struggled with its intended task, it
+                            was an interesting exploration into the opportunities and limitations of natural language processing.
+                        </p>
+                        <a href="meowth/meowth.html">
+                            <button>See More</button>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
         <div class="project-card">
             <div class="project-center">
                 <div class="project-media">
@@ -82,7 +115,7 @@
                             and Clemson advisors. Our final design came in second
                             at a multi university showcase.
                         </p>
-                        <a href="capstone/capstone.html">
+                        <a href="mk-jokes/jokes.html">
                             <button>See More</button>
                         </a>
                     </div>
