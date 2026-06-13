@@ -7,7 +7,19 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const arrow = document.getElementById("scrollArrow");
+
+    arrow.addEventListener("click", function () {
+        window.scrollBy({
+        top: window.innerHeight,
+        behavior: "smooth"
+        });
+    });
+    });
+</script>
+<body class="hero-page">
     <nav class="navbar-container">
         <div class="navbar">
             <div class="nav-links">
@@ -26,23 +38,31 @@
         </div>
     </nav>
 
-    <div class="content">
-        <div class="split">
-            <div class="img-container" style="max-width: 350px;">
-                <img src="misc_img/2025 Andy Grad-1.jpg" alt="Grad-1">
-            </div>
-
-            <div class="split-text left align-left">
+    <div class="hero">
+        <div class="content">
+            <div class="wide">
                 <div class="fontbox">
-                    <h1>Hi, I'm Andrew.</h1>
-                    <p>I am a fast learning Robotics Masters student at Georgia Tech with a background in mechanical engineering. 
-                        I design and evaluate robust hardware and software solutions for autonomous problems, including mathematics 
-                        based motion planning algorithms, novel mechanisms, and robust control methods. I have signifcant experience with CAD design, 
-                        MATLAB programming, and Python software development, that I applied to automated clean-in-place skid design, competetive robotics, 
-                        and TurtleBot3 maze navigation. I am passionate about applying my skills to shape the field of robotics.</p>
+                    <h1 style="color:#fff0e6; margin:auto; font-size: 4.2rem;">Hi, I'm Andrew.</h1>
                 </div>
             </div>
         </div>
+        <div class="scroll-arrow" id="scrollArrow">⌄</div>
+    </div>
+
+    <div class="content">
+        <div class="split">
+                <div class="img-container" style="max-width: 350px;">
+                    <img src="misc_img/2025 Andy Grad-1.jpg" alt="Grad-1">
+                </div>
+
+                <div class="split-text left align-left">
+                    <p>I am a fast learning Robotics Masters student at Georgia Tech with a background in mechanical engineering. 
+                            I design and evaluate robust hardware and software solutions for autonomous problems, including mathematics 
+                            based motion planning algorithms, novel mechanisms, and robust control methods. I have signifcant experience with CAD design, 
+                            MATLAB programming, and Python software development, that I applied to automated clean-in-place skid design, competetive robotics, 
+                            and TurtleBot3 maze navigation. I am passionate about applying my skills to shape the field of robotics.</p>
+                </div>
+            </div>
         <div class="wide">
             <div class="fontbox">
                 <h2>Education</h2>
