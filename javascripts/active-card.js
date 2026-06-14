@@ -1,19 +1,24 @@
 const panels = document.querySelectorAll(".project-card");
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("up");
-      } else {
-        entry.target.classList.remove("up");
-      }
-    });
-  },
-  {
-    root: null,
-    threshold: 0.8 // how much must be visible
-  }
-);
+// disable on mobile / small screens
+const isMobile = window.matchMedia("(max-width: 1085px)").matches;
 
-panels.forEach((panel) => observer.observe(panel));
+if (!isMobile) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("up");
+        } else {
+          entry.target.classList.remove("up");
+        }
+      });
+    },
+    {
+      root: null,
+      threshold: 0.8
+    }
+  );
+
+  panels.forEach((panel) => observer.observe(panel));
+}

@@ -623,7 +623,7 @@ h3 {
     }
 
     /* Headings */
-    h1 { font-size: 2.3rem; }
+    h1 { font-size: 2.3rem; justify-content: center;}
     h2 { font-size: 1.7rem; }
     h3 { font-size: 1.3rem; }
 
@@ -633,10 +633,18 @@ h3 {
         width: 100%;
     }
 
+    .scroll-arrow{
+        bottom: 5px;
+    }
+
+    .theme-bar{
+        bottom:10%;
+    }
+
     /* Navigation */
     .navbar {
-        flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 12px;
     }
 
@@ -653,8 +661,8 @@ h3 {
     }
 
     .nav-links a {
-        font-size: 1.1rem;
-        padding: 6px 10px;
+        font-size: 1rem;
+        padding: 4px 10px;
     }
 
     .link-tab {
