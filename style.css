@@ -1,3 +1,33 @@
+:root{
+    --text: black;
+    --head:black;
+    --head-light:white;
+    --nav: rgba(128, 128, 128, 0.5);
+    --nav-link: black;
+    --highlight: gray;
+    --bg:url('web-bg-gray.png')
+}
+
+html[data-theme='cu']{
+    --text: black;
+    --head: #f68c3d;
+    --head-light: #fff0e6;
+    --nav: #522d8050;
+    --nav-link: #3d215e;
+    --highlight: #d97500;
+    --bg:url('web-bg-purple.png')
+}
+
+html[data-theme='gt']{
+    --text: black;
+    --head: #857437;
+    --head-light: #F9F6E5;
+    --nav: #00244250;
+    --nav-link: #003057;
+    --highlight: #B3A369;
+    --bg:url('web-bg-blue.png')
+}
+
 body {
     margin: 0;
     padding-top: 80px;
@@ -36,7 +66,7 @@ h1, h2, h3 {
     margin-bottom: 15px;
     position: relative;
     width: fit-content;
-    color: #f68c3d;
+    color: var(--head);
 }
 
 h1 {
@@ -52,7 +82,7 @@ h1::after{
     bottom: -1px;
     width: 0;
     height: 2px;
-    background: #f68c3d;
+    background: var(--head);
     transition: width 0.3s ease;
     transform: translateX(-50%);
 }
@@ -72,7 +102,7 @@ h3 {
 
 .hero {
     height: 100vh;                 /* Full screen height */
-    background-image:url('web-bg.png');
+    background-image:var(--bg);
     background-size: cover;        /* Fill screen */
     background-position: center;
     background-repeat: no-repeat;
@@ -82,13 +112,81 @@ h3 {
     overflow: hidden;
 }
 
+.hero h1
+{
+    color:var(--head-light);
+}
+
+.hero h1::after{
+    background:var(--head-light);
+}
+
 .scroll-arrow {
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 6rem;
+  transition: color 0.2 ease, font-weight 0.2 ease;
   animation: bounce 1.5s infinite;
+}
+
+.scroll-arrow:hover {
+    color:var(--highlight);
+    font-weight: bold;
+}
+
+.theme-bar{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:30%;
+    gap: 64px; 
+}
+
+.theme-bar a{
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none; /* ensures no underline */
+    display: flex;
+}
+
+.theme-bar a:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 10px black;
+}
+
+/* icon */
+.theme-bar .gticon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.theme-bar .cuicon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.theme-bar a:hover .gticon {
+    transform: scale(1.1);
+    background-color:  #B3A369;
+}
+
+.theme-bar a:hover .cuicon {
+    transform: scale(1.1);
+    background-color: #F56600;
 }
 
 @keyframes bounce {
@@ -118,9 +216,9 @@ h3 {
     width: 90%;
     font-family: "Poppins", sans-serif;
     margin-top: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #522d8050;  
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--nav);  
     backdrop-filter: blur(6px);
     border-radius: 20px;
     display: flex;
@@ -152,14 +250,14 @@ h3 {
 .nav-links {
     display: flex;
     gap: 25px;
-    padding-left: 20px;
+    padding-left: 28px;
     align-items: center;
 }
 
 .nav-links a {
-    color: #3d215e;
+    color: var(--nav-link);
     text-decoration: none;
-    padding: 8px 12px;
+    padding: 4px 12px;
     border: 2px solid transparent;
     border-radius: 6px;
     background-color: white;
@@ -168,14 +266,14 @@ h3 {
 
 .nav-links a:hover {
     transform: scale(1.05);
-    background-color: #d97500;
+    background-color: var(--highlight);
     color: white;
     border: 2px solid white;
     box-shadow: 4px 4px 10px gray;
 }
 
 .nav-links a.active {
-    background-color: #d97500;
+    background-color: var(--highlight);
     color: white;
     border: 2px solid white;
     transform: scale(1.05);
@@ -185,7 +283,7 @@ h3 {
     margin-left: auto;
     display: flex;
     align-items: center;
-    padding: 0 20px 0 0;
+    padding: 0 28px 0 0;
     gap: 25px; 
 }
 
@@ -203,8 +301,8 @@ h3 {
 
 /* icon */
 .link-tab .icon {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
     display: block;
     transition: transform 0.2s ease;
@@ -246,7 +344,7 @@ h3 {
 .fontbox button{
     display: block;
     color: white;
-    background-color: black; 
+    background-color: var(--nav-link); 
     border: none;
     border-radius: 5px;
     font-size: 1.5rem;
@@ -394,7 +492,7 @@ h3 {
 .project-image.active{
     display: block;
     border-radius: 12px;
-    border: 4px solid #f68c3d
+    border: 4px solid var(--highlight)
 }
 
 .project-image img {
@@ -465,7 +563,7 @@ h3 {
 .project-info button{
     display: block;
     color: white;
-    background-color: black; 
+    background-color: var(--nav-link); 
     border: none;
     border-radius: 5px;
     font-size: 1rem;

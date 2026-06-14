@@ -6,18 +6,28 @@
     <title>About Me</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="javascripts/theme.js" defer></script>
 </head>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const arrow = document.getElementById("scrollArrow");
+(function () {
+    // Theme must run immediately (before paint)
+    const theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = theme;
 
-    arrow.addEventListener("click", function () {
-        window.scrollBy({
-        top: window.innerHeight,
-        behavior: "smooth"
-        });
+    // Other setup can safely wait for DOM
+    document.addEventListener("DOMContentLoaded", function () {
+        const arrow = document.getElementById("scrollArrow");
+
+        if (arrow) {
+            arrow.addEventListener("click", function () {
+                window.scrollBy({
+                    top: window.innerHeight,
+                    behavior: "smooth"
+                });
+            });
+        }
     });
-    });
+})();
 </script>
 <body class="hero-page">
     <nav class="navbar-container">
@@ -42,9 +52,17 @@
         <div class="content">
             <div class="wide">
                 <div class="fontbox">
-                    <h1 style="color:#fff0e6; margin:auto; font-size: 4.2rem;">Hi, I'm Andrew.</h1>
+                    <h1 style="margin:auto; font-size: 4.2rem;">Hi, I'm Andrew.</h1>
                 </div>
             </div>
+        </div>
+        <div class="theme-bar">
+            <a id="gt-button">
+                <img src="gt.png" alt="gt" class="gticon">
+            </a>
+            <a id="cu-button">
+                <img src="paw-white.png" alt="cu" class="cuicon">
+            </a>
         </div>
         <div class="scroll-arrow" id="scrollArrow">⌄</div>
     </div>

@@ -6,7 +6,14 @@
     <title>CIP Skid</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="javascripts/theme.js" defer></script>
 </head>
+<script>
+(function () {
+    const theme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", theme);
+})();
+</script>
 <body>
     <nav class="navbar-container">
         <div class="navbar">
