@@ -106,10 +106,12 @@ h3 {
     background-size: cover;        /* Fill screen */
     background-position: center;
     background-repeat: no-repeat;
+    margin-bottom: 60px;
     color:white;
     display: flex;
     align-items: center;
     overflow: hidden;
+
 }
 
 .hero h1
@@ -213,19 +215,22 @@ h3 {
 }
 
 .navbar {
-    width: 90%;
+    width: 100%;
     font-family: "Poppins", sans-serif;
-    margin-top: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: var(--nav);  
     backdrop-filter: blur(6px);
-    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     z-index: 1000;
+    transition: transform 0.3s ease;
     box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
 }
 
 .name-tab {

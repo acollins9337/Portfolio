@@ -31,7 +31,7 @@
 </script>
 <body class="hero-page">
     <nav class="navbar-container">
-        <div class="navbar">
+        <div class="navbar hidden" id="navbar">
             <div class="nav-links">
                 <a href="index.html" class="active">Home</a>
                 <!-- <a href="experience.html" >EXPERIENCE</a> -->
@@ -48,7 +48,7 @@
         </div>
     </nav>
 
-    <div class="hero">
+    <div class="hero" id="hero">
         <div class="content">
             <div class="wide">
                 <div class="fontbox">
@@ -178,5 +178,24 @@
             </div>
         </div>
     </div>
+    <script>
+        const hero = document.getElementById("hero");
+        const navbar = document.getElementById("navbar");
+
+        const observer = new IntersectionObserver(
+        ([entry]) => {
+            if (entry.isIntersecting) {
+            navbar.classList.add("hidden");
+            } else {
+            navbar.classList.remove("hidden");
+            }
+        },
+        {
+            threshold: 0.05
+        }
+        );
+
+        observer.observe(hero);
+    </script>
 </body>
 </html>
