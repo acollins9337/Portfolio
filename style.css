@@ -103,7 +103,7 @@ h3 {
 }
 
 .hero {
-    height: 100dvh;                 /* Full screen height */
+    height: 100vh;                 /* Full screen height */
     background-image:var(--bg);
     background-size: cover;        /* Fill screen */
     background-position: center;
@@ -639,8 +639,12 @@ h3 {
         width: 100%;
     }
 
+    .hero{
+        height: 100svh;
+    }
+
     .scroll-arrow{
-        bottom: 5px;
+        bottom: 3%;
     }
 
     .theme-bar{
