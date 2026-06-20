@@ -11,7 +11,8 @@
 html[data-theme='cu']{
     --text: black;
     --head: #f68c3d;
-    --head-light: #fff0e6;
+    --head-light: white;
+    /* --head-light: #fff0e6; */
     --nav: #522d8050;
     --nav-link: #3d215e;
     --highlight: #d97500;
@@ -21,7 +22,8 @@ html[data-theme='cu']{
 html[data-theme='gt']{
     --text: black;
     --head: #857437;
-    --head-light: #F9F6E5;
+    /* --head-light: #F9F6E5; */
+    --head-light: white;
     --nav: #00244250;
     --nav-link: #003057;
     --highlight: #B3A369;
@@ -101,7 +103,7 @@ h3 {
 }
 
 .hero {
-    height: 100vh;                 /* Full screen height */
+    height: 100dvh;                 /* Full screen height */
     background-image:var(--bg);
     background-size: cover;        /* Fill screen */
     background-position: center;
@@ -111,7 +113,6 @@ h3 {
     display: flex;
     align-items: center;
     overflow: hidden;
-
 }
 
 .hero h1
@@ -120,12 +121,12 @@ h3 {
 }
 
 .hero h1::after{
-    background:var(--head-light);
+    background:var(--highlight);
 }
 
 .scroll-arrow {
   position: absolute;
-  bottom: 20px;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 6rem;
