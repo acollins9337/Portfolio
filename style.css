@@ -45,6 +45,11 @@ body.hero-page {
     padding-top: 0;
 }
 
+/* project pages use the in-flow .page-nav, so no fixed-nav offset needed */
+body.project-page {
+    padding-top: 0;
+}
+
 /* animated background layer */
 body::before {
     content: "";
@@ -531,6 +536,86 @@ html {
     transform: scale(1.1);
 }
 
+/* Lightweight nav for project pages: back link left, socials right.
+   Sits in normal flow so it scrolls away with the page. */
+.page-nav {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 22px 0 6px;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.page-nav .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--nav-link);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    padding: 4px 2px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease, gap 0.2s ease;
+}
+
+.page-nav .back-link .arrow {
+    font-size: 1.15rem;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.page-nav .back-link:hover,
+.page-nav .back-link:focus-visible {
+    color: var(--highlight);
+    border-bottom-color: var(--highlight);
+}
+
+.page-nav .back-link:hover .arrow,
+.page-nav .back-link:focus-visible .arrow {
+    transform: translateX(-3px);
+}
+
+/* socials: flat, borderless icons instead of the boxed tiles */
+.page-nav .page-social {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.page-nav .page-social a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--nav-link);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, background-color 0.2s ease,
+                border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.page-nav .page-social a:hover {
+    transform: scale(1.08);
+    background-color: var(--highlight);
+    border-color: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.page-nav .page-social .icon {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    display: block;
+}
+
 .content {
     width: 90%;
     margin: auto;
@@ -933,6 +1018,16 @@ html {
         justify-content: center;
         padding: 8px 0;
         gap: 16px;
+    }
+
+    .page-nav {
+        width: 95%;
+        padding: 16px 0 4px;
+    }
+
+    .page-nav .page-social .icon {
+        width: 24px;
+        height: 24px;
     }
 
     /* Content container */
