@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Andrew Collins</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     <script src="javascripts/theme.js" defer></script>
@@ -30,22 +30,39 @@
 })();
 </script>
 <body class="hero-page">
-    <nav class="navbar-container">
-        <div class="navbar hidden" id="navbar">
-            <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <!-- <a href="experience.html" >EXPERIENCE</a> -->
-                <a href="projects.html">Projects</a>
-            </div>
-            <div class="link-tab">
-                <a href="https://www.linkedin.com/in/andrew-collins-bsme-msrobo/" target="_blank">
-                    <img src="misc_img/linkedin.png" alt="LinkedIn" class="icon">
-                </a>
-                <a href="https://github.com/acollins9337" target="_blank">
-                    <img src="misc_img/github.png" alt="github" class="icon">
-                </a>
-            </div>
-        </div>
+    <!-- Sticky scroll spy -->
+    <nav class="spy hidden" id="spy" aria-label="Section navigation">
+        <ul class="spy-list">
+            <li class="spy-item" data-target="about">
+                <a href="#about"><span class="spy-dot"></span></a>
+                <span class="spy-label">About</span>
+            </li>
+            <li class="spy-item" data-target="education">
+                <a href="#education"><span class="spy-dot"></span></a>
+                <span class="spy-label">Education</span>
+            </li>
+            <li class="spy-item" data-target="skills">
+                <a href="#skills"><span class="spy-dot"></span></a>
+                <span class="spy-label">Skills</span>
+            </li>
+            <li class="spy-item" data-target="experience">
+                <a href="#experience"><span class="spy-dot"></span></a>
+                <span class="spy-label">Experience</span>
+            </li>
+            <li class="spy-item" data-target="extracurriculars">
+                <a href="#extracurriculars"><span class="spy-dot"></span></a>
+                <span class="spy-label">Extracurriculars</span>
+            </li>
+            <li class="spy-item" data-target="projects">
+                <a href="#projects"><span class="spy-dot"></span></a>
+                <span class="spy-label">Projects</span>
+            </li>
+        </ul>
+
+        <a class="spy-top" href="#hero" aria-label="Back to top">
+            &#8593;
+            <span class="spy-label">Back to top</span>
+        </a>
     </nav>
 
     <div class="hero" id="hero">
@@ -68,151 +85,330 @@
     </div>
 
     <div class="content">
-        <div class="split">
+        <section class="spy-section" id="about">
+            <div class="split">
                 <div class="img-container" style="max-width: 350px;">
                     <img src="misc_img/2025 Andy Grad-1.jpg" alt="Grad-1">
                 </div>
 
                 <div class="split-text left align-left">
-                    <p>I am a fast learning Robotics Masters student at Georgia Tech with a background in mechanical engineering. 
-                            I design and evaluate robust hardware and software solutions for autonomous problems, including mathematics 
-                            based motion planning algorithms, novel mechanisms, and robust control methods. I have signifcant experience with CAD design, 
-                            MATLAB programming, and Python software development, that I applied to automated clean-in-place skid design, competetive robotics, 
+                    <p>I am a fast learning Robotics Masters student at Georgia Tech with a background in mechanical engineering.
+                            I design and evaluate robust hardware and software solutions for autonomous problems, including mathematics
+                            based motion planning algorithms, novel mechanisms, and robust control methods. I have signifcant experience with CAD design,
+                            MATLAB programming, and Python software development, that I applied to automated clean-in-place skid design, competetive robotics,
                             and TurtleBot3 maze navigation. I am passionate about applying my skills to shape the field of robotics.</p>
+
+                    <div class="social-row">
+                        <a href="https://www.linkedin.com/in/andrew-collins-bsme-msrobo/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <img src="misc_img/linkedin.png" alt="LinkedIn" class="icon">
+                        </a>
+                        <a href="https://github.com/acollins9337" target="_blank" rel="noopener" aria-label="GitHub">
+                            <img src="misc_img/github.png" alt="GitHub" class="icon">
+                        </a>
+                    </div>
                 </div>
             </div>
-        <div class="wide">
-            <div class="fontbox">
-                <h2>Education</h2>
-                <ul>
-                    <li>
-                        <strong>Master of Science</strong> | <em> Georgia Institute of Technology </em>| August 2025 - May 2027 | GPA 3.7/4.0
-                    </li>
-                    <li>
-                        <strong>Bachelor of Science</strong> | <em> Clemson University Honors College </em> | August 2022 - May 2025 | GPA 3.95/4.0
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="wide">
-            <div class="fontbox">
-                <h2>Skills</h2>
-                <h3>Software</h3>
-                <p>
-                    Autodesk Inventor, SolidWorks, MATLAB, Simulink, Microsoft Office, Abaqus, Python, Basic C++, ROS2, Ubuntu Linux, Bash, LT Spice, LaTeX
-                </p>
-                <h3>Technical Skills</h3>
-                <p>
-                    Finite Element Analysis, Process Flow Diagrams, P&IDs, 3D Printing, Programming, Engineering Drawings, Product Testing, Ladder Logic, Perception/ Image Processing
-                </p>
-                <h3>Soft Skills</h3>
-                <p>
-                    Collaborative Teamwork, Project Management, Communication, Research, Problem Solving
+        </section>
 
-                </p>
+        <section class="spy-section" id="education">
+            <div class="wide">
+                <div class="fontbox">
+                    <h2>Education</h2>
+                    <ul>
+                        <li>
+                            <strong>Master of Science</strong> | <em> Georgia Institute of Technology </em>| August 2025 - May 2027 | GPA 3.7/4.0
+                        </li>
+                        <li>
+                            <strong>Bachelor of Science</strong> | <em> Clemson University Honors College </em> | August 2022 - May 2025 | GPA 3.95/4.0
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="wide">
-            <div class="fontbox"><h2>Experience</h2></div>
-        </div>
-        <div class="wide">
-            <div class="fontbox">
-                <h3>Graduate Assistant</h3>
-                <b>Laboratory for Intelligent Decision and Robotics  |  August 2026 - Present</b>
-                <ul>
-                    <li>Focus on tactile sensing and teaching robots to learn by touch</li>
-                    <li>Deliver high quality research in a timely manner, and evaluate reigorously with abalation studyings and quantified results</li>
-                    <li>Train, deploy, and evaluate reinforcement learning action-conditioned policies</li>
-                    <li>Work spans various areas including loco-manipulation, gaussian splatting, sensor hardware, and physical hardware</li>
-                    <li>Looking to bridge the gap between humanoid robotics and contact rich manipulation tasks with tactile sensors</li>
-                </ul>
+        </section>
+
+        <section class="spy-section" id="skills">
+            <div class="wide">
+                <div class="fontbox">
+                    <h2>Skills</h2>
+                    <h3>Software</h3>
+                    <p>
+                        Autodesk Inventor, SolidWorks, MATLAB, Simulink, Microsoft Office, Abaqus, Python, Basic C++, ROS2, Ubuntu Linux, Bash, LT Spice, LaTeX
+                    </p>
+                    <h3>Technical Skills</h3>
+                    <p>
+                        Finite Element Analysis, Process Flow Diagrams, P&IDs, 3D Printing, Programming, Engineering Drawings, Product Testing, Ladder Logic, Perception/ Image Processing
+                    </p>
+                    <h3>Soft Skills</h3>
+                    <p>
+                        Collaborative Teamwork, Project Management, Communication, Research, Problem Solving
+
+                    </p>
+                </div>
             </div>
-            <div class="fontbox">
-                <h3>Grader - ME 6441</h3>
-                <b>Georgia Institute of Technology  |  August 2026 - Present</b>
-                <ul>
-                    <li>Mentor students in graduate-level 3D rigid-body dynamics, providing guidance on coursework and conceptual questions.</li>
-                    <li>Organize and facilitate meetings and office hours to support student learning.</li>
-                    <li>Maintain a consistent grading schedule and provide timely feedback on assignments.</li>
-                    <li>Apply and maintain strong knowledge of graduate-level 3D rigid-body dynamics concepts.</li>
-                </ul>
+        </section>
+
+        <section class="spy-section" id="experience">
+            <div class="wide">
+                <div class="fontbox"><h2>Experience</h2></div>
             </div>
-            <div class="fontbox">
-                <h3>Volunteer Researcher</h3>
-                <b>Laboratory for Intelligent Decision and Robotics  |  December 2025 - August 2026</b>
-                <ul>
-                    <li>Contribute to multiple research projects within the Georgia Tech LIDAR Group focused on improving the generalizability, efficiency, and safety of humanoid robots. </li>
-                    <li>Work across robotic hardware, tactile sensing systems, and learning-based control pipelines for humanoid platforms. </li>
-                    <li>Collaborate on research spanning hardware development, sensor integration, data collection, and robot policy training. </li>
-                    <li>Contributed to a research project submitted to a robotics conference (CoRL) in 2026.</li>
-                </ul>
+            <div class="wide">
+                <div class="fontbox">
+                    <h3>Graduate Assistant</h3>
+                    <b>Laboratory for Intelligent Decision and Robotics  |  August 2026 - Present</b>
+                    <ul>
+                        <li>Focus on tactile sensing and teaching robots to learn by touch</li>
+                        <li>Deliver high quality research in a timely manner, and evaluate reigorously with abalation studyings and quantified results</li>
+                        <li>Train, deploy, and evaluate reinforcement learning action-conditioned policies</li>
+                        <li>Work spans various areas including loco-manipulation, gaussian splatting, sensor hardware, and physical hardware</li>
+                        <li>Looking to bridge the gap between humanoid robotics and contact rich manipulation tasks with tactile sensors</li>
+                    </ul>
+                </div>
+                <div class="fontbox">
+                    <h3>Grader - ME 6441</h3>
+                    <b>Georgia Institute of Technology  |  August 2026 - Present</b>
+                    <ul>
+                        <li>Mentor students in graduate-level 3D rigid-body dynamics, providing guidance on coursework and conceptual questions.</li>
+                        <li>Organize and facilitate meetings and office hours to support student learning.</li>
+                        <li>Maintain a consistent grading schedule and provide timely feedback on assignments.</li>
+                        <li>Apply and maintain strong knowledge of graduate-level 3D rigid-body dynamics concepts.</li>
+                    </ul>
+                </div>
+                <div class="fontbox">
+                    <h3>Volunteer Researcher</h3>
+                    <b>Laboratory for Intelligent Decision and Robotics  |  December 2025 - August 2026</b>
+                    <ul>
+                        <li>Contribute to multiple research projects within the Georgia Tech LIDAR Group focused on improving the generalizability, efficiency, and safety of humanoid robots. </li>
+                        <li>Work across robotic hardware, tactile sensing systems, and learning-based control pipelines for humanoid platforms. </li>
+                        <li>Collaborate on research spanning hardware development, sensor integration, data collection, and robot policy training. </li>
+                        <li>Contributed to a research project submitted to a robotics conference (CoRL) in 2026.</li>
+                    </ul>
+                </div>
+                <div class="fontbox">
+                    <h3>Undergraduate Researcher</h3>
+                    <b>Clemson University International Center for Automotive Research   |  May 2021 - August 2021</b>
+                    <ul>
+                        <li>Developed an Android application leveraging deep learning for real-time road sign detection and user alerts.</li>
+                        <li>Designed and implemented an end-to-end mobile sensing pipeline to assist drivers and individuals with visual impairments.</li>
+                        <li>Applied computer vision and machine learning techniques to identify and classify road signs from camera input.</li>
+                        <li>Presented project results and demonstrated the application to peers, faculty, and industry professionals.</li>
+                    </ul>
+                </div>
+                <div class="fontbox">
+                    <h3>Lead Mechanical Designer</h3>
+                    <b>Clemson VEXU Robotics Club |  August 2022 - May 2024</b>
+                    <p>
+                    <ul>
+                        <li>Designed, manufactured, and evaluated functional robotic components, including powertrain gears and structural chassis supports.</li>
+                        <li>Designed and developed robotic subsystems, including chassis, end effectors, and launchers, to accomplish competition-specific tasks.</li>
+                        <li>Collaborated with programming and construction subteams to ensure designs were functional, manufacturable, and practical.</li>
+                        <li>Contributed to the team’s success in qualifying for the VEXU World Championships.</li>
+                    </ul>
+                    </p>
+                </div>
             </div>
-            <div class="fontbox">
-                <h3>Undergraduate Researcher</h3>
-                <b>Clemson University International Center for Automotive Research   |  May 2021 - August 2021</b>
-                <ul>
-                    <li>Developed an Android application leveraging deep learning for real-time road sign detection and user alerts.</li>
-                    <li>Designed and implemented an end-to-end mobile sensing pipeline to assist drivers and individuals with visual impairments.</li>
-                    <li>Applied computer vision and machine learning techniques to identify and classify road signs from camera input.</li>
-                    <li>Presented project results and demonstrated the application to peers, faculty, and industry professionals.</li>
-                </ul>
+        </section>
+
+        <section class="spy-section" id="extracurriculars">
+            <div class="wide">
+                <div class="fontbox"><h2>Extracurriculars</h2></div>
             </div>
-            <div class="fontbox">
-                <h3>Lead Mechanical Designer</h3>
-                <b>Clemson VEXU Robotics Club |  August 2022 - May 2024</b>
-                <p>
-                <ul>
-                    <li>Designed, manufactured, and evaluated functional robotic components, including powertrain gears and structural chassis supports.</li>
-                    <li>Designed and developed robotic subsystems, including chassis, end effectors, and launchers, to accomplish competition-specific tasks.</li>
-                    <li>Collaborated with programming and construction subteams to ensure designs were functional, manufacturable, and practical.</li>
-                    <li>Contributed to the team’s success in qualifying for the VEXU World Championships.</li>
-                </ul>
-                </p>
+            <div class="wide">
+                <div class="fontbox">
+                    <h3>Armorer, Saber Team Coach</h3>
+                    <b>Clemson Fencing Club  |  August 2024 - May 2025</b>
+                    <ul>
+                        <li>Managed maintenance and repair of all fencing equipment for a club of approximately fifty members.</li>
+                        <li>Troubleshot and repaired damaged fencing equipment using circuits and multimeters.</li>
+                        <li>Maintained an inventory system to track club-owned equipment, repairs, and purchase requests</li>
+                        <li>Coached the saber team, mentoring both new and experienced fencers to build competitive performance and club community.</li>
+                    </ul>
+                </div>
+                <div class="fontbox">
+                    <h3>Saber Squad Leader</h3>
+                    <b>Yellowjacket Fencing Club  |  January 2026 - Present</b>
+                    <ul>
+                        <li>Oversee practice alongside fellow squad leaders for the club's saber squad.</li>
+                        <li>Advise team officers on competitive decisions and squad strategy.</li>
+                        <li>Coach and mentor new fencers, leading practice sessions on a regular basis.</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="wide">
-            <div class="fontbox"><h2>Extracurriculars</h2></div>
-        </div>
-        <div class="wide">
-            <div class="fontbox">
-                <h3>Armorer, Saber Team Coach</h3>
-                <b>Clemson Fencing Club  |  August 2024 - May 2025</b>
-                <ul>
-                    <li>Managed maintenance and repair of all fencing equipment for a club of approximately fifty members.</li>
-                    <li>Troubleshot and repaired damaged fencing equipment using circuits and multimeters.</li>
-                    <li>Maintained an inventory system to track club-owned equipment, repairs, and purchase requests</li>
-                    <li>Coached the saber team, mentoring both new and experienced fencers to build competitive performance and club community.</li>
-                </ul>
+        </section>
+
+        <section class="spy-section" id="projects">
+            <!--Calculation is height*(450/width)-->
+            <div class="wide"><div class="fontbox"><h2>Projects</h2></div></div>
+
+            <div class="project-card" style="height: 569px;">
+                <div class="project-center">
+                    <div class="project-media">
+
+                        <div class="project-image-mask">
+                            <img src="wtumi/can.png" class="project-image active" alt="">
+                            <img src="wtumi/ball.png" class="project-image" alt="">
+                            <img src="wtumi/beam.png" class="project-image" alt="">
+                            <span class="project-caption">WT-UMI</span>
+                            <button class="prev">&lt;</button>
+                            <button class="next">&gt;</button>
+                        </div>
+
+                        <div class="project-info">
+                            <h3>WT-UMI</h3>
+                            <p>
+                                As part of my research for the Georgia Tech LIDAR Group, I worked on a team researching
+                                tactile sensing and whole body manipulation. Together we developed a pipeline that enabeled
+                                humans to collect data that could be used to train a whole body manipulation planner policy driven
+                                by tactile sensor input. I worked predominantly on sensor hardware design and integration. We recently submitted
+                                to CoRL and are waiting on a response.
+                            </p>
+                            <a href="wtumi/wt-umi.html">
+                                <button>See More</button>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-            <div class="fontbox">
-                <h3>Saber Squad Leader</h3>
-                <b>Yellowjacket Fencing Club  |  January 2026 - Present</b>
-                <ul>
-                    <li>Oversee practice alongside fellow squad leaders for the club's saber squad.</li>
-                    <li>Advise team officers on competitive decisions and squad strategy.</li>
-                    <li>Coach and mentor new fencers, leading practice sessions on a regular basis.</li>
-                </ul>
+
+            <div class="project-card" style="height: 398px;">
+                <div class="project-center">
+                    <div class="project-media">
+
+                        <div class="project-image-mask">
+                            <img src="ml-jokes/svm.png" class="project-image active" alt="">
+                            <img src="ml-jokes/HDBSCAN.jpg" class ="project-image" alt="">
+                            <img src="ml-jokes/SVMNumericalResults.png" class="project-image" alt="">
+                            <img src="ml-jokes/LinearRegressionPredictedvsActual.png" class="project-image" style="height: 398px" alt="">
+                            <span class="project-caption">Humor Predictor</span>
+                            <button class="prev">&lt;</button>
+                            <button class="next">&gt;</button>
+                        </div>
+
+                        <div class="project-info">
+                            <h3>Predicting Humor with Machine Learning</h3>
+                            <p>
+                                For the final project of my Machine Learning course I worked with four other students to
+                                apply machine learning to predict whether jokes would be viral. Using a dataset
+                                of one-million jokes from the r/jokes subreddit we applied SVM and logistic
+                                regression to help us make inferences on unseen jokes. While our final pipeline may have struggled, it
+                                was an interesting exploration into the limitations of natural language processing.
+                            </p>
+                            <a href="ml-jokes/jokes.html">
+                                <button>See More</button>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-        </div>
+
+            <div class="project-card">
+                <div class="project-center">
+                    <div class="project-media">
+
+                        <div class="project-image-mask">
+                            <img src="maze-solver/tb3.jpg" class="project-image active" alt="">
+                            <span class="project-caption">Maze Solver</span>
+                            <button class="prev">&lt;</button>
+                            <button class="next">&gt;</button>
+                        </div>
+
+                        <div class="project-info">
+                            <h3>ROS2 Autonomous Maze Solver</h3>
+                            <p>
+                                I spent some time working with a partner on a software package to solve a simple maze.
+                                We created a ROS2/Python package to solve
+                                the maze by using machine learning and ROS2 NAV2. A simple state machine controlled behaviors and PID controllers enabeled
+                                precise movements. Our final submission achieved 90% sign classification accuracy,
+                                and was able to complete the maze properly and without error in 5/6 tests.
+                            </p>
+                            <a href="maze-solver/maze-solver.html">
+                                <button>See More</button>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" style="height: 517px">
+                <div class="project-center">
+                    <div class="project-media" >
+
+                        <div class="project-image-mask">
+                            <img src="capstone/skid.jpeg" class="project-image active" alt="">
+                            <img src="capstone/proto2.JPG" class="project-image" alt="">
+                            <img src="capstone/prototype.jpeg" class="project-image" alt="">
+                            <span class="project-caption">CIP Skid</span>
+                            <button class="prev">&lt;</button>
+                            <button class="next">&gt;</button>
+                        </div>
+
+                        <div class="project-info">
+                            <h3>Fluor CIP Skid</h3>
+                            <p>
+                                I worked with a team of seven other Clemson ME students to design a Clean-In-Place Skid system in partnership with Fluor.
+                                I focused heavily on the conceptual design side of the project,
+                                doing much of my work in the areas of CAD design and thermodynamic calculations.
+                                I also acted as the Group Liason, ensuring useful and professional communcation with the Fluor sponsors and
+                                and Clemson advisors. Our final design came in second
+                                at a multi university showcase.
+                            </p>
+                            <a href="capstone/capstone.html">
+                                <button>See More</button>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" style="height: 600px;">
+                <div class="project-center">
+                    <div class="project-media">
+
+                        <div class="project-image-mask">
+                            <img src="meowth/meowth2 title.jpg" class ="project-image active" alt="">
+                            <img src="meowth/meowth3.jpg" class ="project-image" alt="">
+                            <img src="meowth/meowth4.jpg" class ="project-image" alt="">
+                            <img src="meowth/meowth5.jpg" class ="project-image" alt="">
+                            <img src="meowth/meowth6.jpg" class ="project-image" alt="">
+                            <img src="meowth/meowth7.jpg" class ="project-image" alt="">
+                            <img src="meowth/meowth8.jpg" class ="project-image" alt="">
+                            <img src="meowth/meowth9.jpg" class ="project-image" alt="">
+                            <img src="meowth/meowth10.jpg" class ="project-image" alt="">
+                            <img src="meowth/meowth11.jpg" class ="project-image" alt="">
+                            <img src="meowth/meowth12.jpg" class ="project-image" alt="">
+                            <span class="project-caption">VEXU Robot</span>
+                            <button class="prev">&lt;</button>
+                            <button class="next">&gt;</button>
+                        </div>
+
+                        <div class="project-info">
+                            <h3>VEXU Robot "Meowth"</h3>
+                            <p>
+                                This project is my most mechanically advanced project to date.  I worked closely with my team
+                                and designed this over the course of an entire school year. It includes numerous subsystems, such as the drivetrain, the intake,
+                                 the linear-launcher, and the winch release. Perhaps the highlight of the build is the winch release
+                                system. Conventional slipgear systems would not work, because multiple full revolutions were required to fully retract the
+                                linear launcher, so my team came up with a creative solution: a release arm that physically seperated the gears to avoid motor damage.
+                                The linear launcher system that my team and I developed gave the robot
+                                a near perfect disk grouping that minimized the number of missed disks, and qualified our team for the World Championships.
+                                See the VEX Robotics Spin Up game reveal for more information.
+                            </p>
+                            <a href="meowth/meowth.html">
+                                <button>See More</button>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-    <script>
-        const hero = document.getElementById("hero");
-        const navbar = document.getElementById("navbar");
 
-        const observer = new IntersectionObserver(
-        ([entry]) => {
-            if (entry.isIntersecting) {
-            navbar.classList.add("hidden");
-            } else {
-            navbar.classList.remove("hidden");
-            }
-        },
-        {
-            threshold: 0.05
-        }
-        );
-
-        observer.observe(hero);
-    </script>
+    <script src="javascripts/cycle.js"></script>
+    <script src="javascripts/active-card.js"></script>
+    <script src="javascripts/scrollspy.js"></script>
 </body>
 </html>

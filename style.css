@@ -203,6 +203,218 @@ h3 {
   }
 }
 
+/* ==========================
+   Scroll spy rail
+   ========================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.spy-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-margin-top: 40px;
+}
+
+.spy {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+}
+
+/* hidden while the hero owns the screen */
+.spy.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50%) translateX(40px);
+    pointer-events: none;
+}
+
+.spy-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* the vertical line linking the circles */
+.spy-list::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 21px;      /* line ends at the center of the first/last circle */
+    bottom: 21px;
+    width: 2px;
+    transform: translateX(-50%);
+    background-color: var(--nav-link);
+    opacity: 0.3;
+    border-radius: 2px;
+}
+
+.spy-item {
+    position: relative;
+    padding: 11px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spy-item > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* hollow circle */
+.spy-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--nav-link);
+    background-color: white;
+    display: block;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.25s ease, background-color 0.25s ease,
+                border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.spy-item > a:hover .spy-dot,
+.spy-item > a:focus-visible .spy-dot {
+    transform: scale(1.4);
+    border-color: var(--highlight);
+}
+
+/* grown + filled for the section you are reading */
+.spy-item.active .spy-dot {
+    transform: scale(1.85);
+    background-color: var(--highlight);
+    border-color: var(--highlight);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+/* popout with the section name */
+.spy-label {
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    margin-right: 16px;
+    transform: translateY(-50%) translateX(8px);
+    padding: 4px 11px;
+    white-space: nowrap;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--nav-link);
+    border-radius: 6px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* little pointer on the popout */
+.spy-label::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+    border-left-color: var(--nav-link);
+}
+
+.spy-item:hover .spy-label,
+.spy-item:focus-within .spy-label,
+.spy-top:hover .spy-label,
+.spy-top:focus-visible .spy-label {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+/* back to top arrow */
+.spy-top {
+    position: relative;
+    margin-top: 18px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    line-height: 1;
+    color: white;
+    background-color: var(--nav-link);
+    border: 2px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, background-color 0.2s ease,
+                border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.spy-top:hover,
+.spy-top:focus-visible {
+    transform: scale(1.12);
+    background-color: var(--highlight);
+    border-color: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* social links beside the personal summary */
+.social-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.social-row a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--nav-link);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, background-color 0.2s ease,
+                border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-row a:hover {
+    transform: scale(1.08);
+    background-color: var(--highlight);
+    border-color: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.social-row .icon {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    display: block;
+}
+
 /* Navigation bar styling */
 .navbar-container {
     position: fixed;
@@ -649,6 +861,47 @@ h3 {
 
     .theme-bar{
         bottom:10%;
+    }
+
+    /* Scroll spy rail */
+    .spy {
+        right: 8px;
+    }
+
+    /* keep body copy clear of the rail */
+    body:has(.spy) > .content {
+        padding-right: 34px;
+    }
+
+    .spy-item {
+        padding: 8px 0;
+    }
+
+    .spy-list::before {
+        top: 17px;
+        bottom: 17px;
+    }
+
+    .spy-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .spy-label {
+        font-size: 0.85rem;
+        margin-right: 12px;
+    }
+
+    .spy-top {
+        width: 30px;
+        height: 30px;
+        font-size: 1.15rem;
+        margin-top: 14px;
+    }
+
+    .social-row {
+        justify-content: center;
+        gap: 16px;
     }
 
     /* Navigation */
