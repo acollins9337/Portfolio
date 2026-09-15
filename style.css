@@ -859,8 +859,29 @@ html {
     z-index: 1;
 }
 
+/* Keeps a subheading tucked under the project title instead of a full flex gap */
+.project-heading h3 {
+    margin: 0;
+}
+
+.project-subhead {
+    margin: 4px 0 0;
+    font-size: 0.95rem;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--nav-link);
+}
+
+/* Author list under a publication's description */
+.project-authors {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #6b6b6b;
+}
+
 .project-info a{
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .project-info button{
