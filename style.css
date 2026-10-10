@@ -539,8 +539,7 @@ html {
 /* Lightweight nav for project pages: back link left, socials right.
    Sits in normal flow so it scrolls away with the page. */
 .page-nav {
-    width: 90%;
-    max-width: 1400px;
+    width: 81%; /* matches .content (90%) > .wide (90%) text column */
     margin: 0 auto;
     padding: 22px 0 6px;
     font-family: "Poppins", sans-serif;
@@ -1131,10 +1130,10 @@ html {
         min-height: 0 !important;
     }
 
-    /* Kill hover-only transitions */
-    .project-card:hover .project-image-mask,
-    .project-card:hover .project-caption,
-    .project-card:hover .project-info {
+    /* Kill the scroll-triggered (.up) slide animation */
+    .project-card.up .project-image-mask,
+    .project-card.up .project-caption,
+    .project-card.up .project-info {
         transform: none;
         opacity: 1;
     }

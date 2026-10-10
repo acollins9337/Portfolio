@@ -285,6 +285,36 @@
         <section class="spy-section" id="projects">
             <div class="wide"><div class="fontbox"><h2>Projects</h2></div></div>
 
+            <div class="project-card" style="height: 678px;">
+                <div class="project-center">
+                    <div class="project-media">
+
+                        <div class="project-image-mask">
+                            <img src="hand2hand/hand2hand.png" class="project-image active" alt="">
+                            <span class="project-caption">Hand2Hand</span>
+                            <button class="prev">&lt;</button>
+                            <button class="next">&gt;</button>
+                        </div>
+
+                        <div class="project-info">
+                            <h3>Hand2Hand</h3>
+                            <p>
+                                Hand2Hand is a video processing pipeline that uses gaussian splatting to build a 3D model of a hand from an input video, 
+                                similar to the Glove2Hand project. As part of one of the research projects with the Georgia Tech LIDAR Lab, we needed a 
+                                pipeline similar to the original Glove2Hand paper but with more generalizability to arbitrary videos. My approach used 3D meshes and a small MLP
+                                to bake colors to the gaussians. Overall, I was able to 
+                                deliver a pipeline that successfully created a 3D hand model from an arbitrary input video while being efficient enough to complete
+                                recounstructions of the entire Hot3D dataset on a single 4090 in less than one day.
+                            </p>
+                            <a href="hand2hand/hand2hand.html">
+                                <button>See More</button>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
             <div class="project-card" style="height: 398px;">
                 <div class="project-center">
                     <div class="project-media">

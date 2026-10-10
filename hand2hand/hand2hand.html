@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand2Hand</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="javascripts/theme.js" defer></script>
+</head>
+<script>
+(function () {
+    const theme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", theme);
+})();
+</script>
+<body class="project-page">
+    <nav class="page-nav" aria-label="Page navigation">
+        <a class="back-link" href="../index.html#projects">
+            <span class="arrow" aria-hidden="true">&lt;</span>Back
+        </a>
+        <div class="page-social">
+            <a href="https://www.linkedin.com/in/andrew-collins-bsme-msrobo/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="../misc_img/linkedin.png" alt="LinkedIn" class="icon">
+            </a>
+            <a href="https://github.com/acollins9337" target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="../misc_img/github.png" alt="GitHub" class="icon">
+            </a>
+        </div>
+    </nav>
+    
+    <div class="content">
+        <div class="wide">
+            <div class="fontbox">
+                <h1>Hand2Hand</h1>
+                <p>
+                    As part of a research project with the Georgia Tech LIDAR Lab, I worked to develop a pipeline to build 3D models of hands from 2D videos. I based my work on the
+                    Glove2Hand research project by Zhang et al. from Rutgers University and Meta Reality Labs. Unlike the Glove2Hand pipeline though, I wanted to be able to use arbitrary
+                    videos rather than prerecorded videos with high quality data. My approach allowed for two inputs: plain video data that Hand2Hand fit Mano meshes to, or Hot3D recordings,
+                    which already had fit 3D Mano meshes. Once the 3D mesh overlay was established, gaussians were propagated at each vertex and on each face. Depending on the size of the face
+                    and the density of the vertices in that area, gaussians were given different sizes and quantities to maintain a smooth look. A small MLP was used to bake the colors to the gaussians.
+                    Problematically, input videos may contain frames where the hands are out of frame or hidden behind an object. To prevent these bad frames from affecting the color of the hands, I took
+                    two approaches;
+                </p>
+                <ol>
+                    <li>Bake colors using the whole video. The majority color for the hands would be the intended color, so I trained on as much good color data as possible.</li>
+                    <li>Reject colors out of the expected range. When unexpected colors did occur (outside 1.5 standard deviations), I replaced the colors of these gaussians
+                        with the colors of their k nearest neighbors.
+                    </li>
+                </ol>
+            </div>
+            <div class="img-container" style="max-width: 100%;">
+                <video controls muted>
+                    <source src="comparison_recon_overlay.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="wide">
+            <div class="fontbox">
+                <p>
+                    I also had to design the system for computational efficiency, due to the limited compute available. This involved ensuring RAM and VRAM were managed correctly
+                    to prevent memory leaks, and that the lifecycle of any running process always cleaned up after itself. At the conclusion of the project, I was able to run 
+                    the pipeline on the entire Hot3D dataset in less than one day on a single RTX 4090.
+                </p>
+                <div class="button-row">
+                    <a href="https://github.com/acollins9337/hand2hand">
+                        <button>Code</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
