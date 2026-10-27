@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAPNAV</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="javascripts/theme.js" defer></script>
+</head>
+<script>
+(function () {
+    const theme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", theme);
+})();
+</script>
+<body class="project-page">
+    <nav class="page-nav" aria-label="Page navigation">
+        <a class="back-link" href="../index.html#projects">
+            <span class="arrow" aria-hidden="true">&lt;</span>Back
+        </a>
+        <div class="page-social">
+            <a href="https://www.linkedin.com/in/andrew-collins-bsme-msrobo/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="../misc_img/linkedin.png" alt="LinkedIn" class="icon">
+            </a>
+            <a href="https://github.com/acollins9337" target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="../misc_img/github.png" alt="GitHub" class="icon">
+            </a>
+        </div>
+    </nav>
+    
+    <div class="content">
+        <div class="wide">
+            <div class="fontbox">
+                <h1>TAPNAV</h1>
+                <p>
+                    TAPNAV is a robotics navigation pipeline that allows humanoid robots to feel their way around their environment with
+                    strategic contacts. A global planner plans a route with the lowest amount of predicted uncertainty that also minimzies distance.
+                    At test time, TAPNAV propogates uncertainty when the robot is moving, then reduces it when contact are made with walls and obstacles.
+                    Whole body control is achieved through upper and lower body policies that track end effector pose and foot pose.
+                </p>
+            </div>
+        </div>
+
+        <div class="split">
+            <div class="img-container" style="max-width: 650px;">
+                <video controls muted>
+                    <source src="tapnav_sim.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="split-text left align-left">
+                <div class="fontbox">
+                    <p>
+                        We tested TAPNAV on both simulation and real world deployments. One of my contributions was evironment simulation, and ensuring feasibility
+                        for navigation. I generated a set of maps that mimicked real world rooms, including curving hallways, tight corridors, and larger more open spaces.
+                        I then added objects to these rooms in a pseudo-random fashion, selecting from a set of reasonable points where obstacles might be in real rooms. I 
+                        included tolerances to ensure that no spaces on the maps were too small for the robot to pass through unless it was intentionally so. Each of these maps
+                        had 2D representations for global planning as well as MuJoCo versions for simulation.
+                        These maps were used as part of a study to prove that TAPNAV generalized to various maps and not just the cleaner ones tested in some of our real world
+                        experiments.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="split">
+            <div class="split-text left align-right">
+                <div class="fontbox">
+                    <p>
+                        My other major contribution to TAPNAV was working through the implementation of the uncertainty propagation for the global planner. Without the global
+                        planner accounting for uncertainty, the modified A* algorithm would simply take the shortest route. Instead, the planner estimates the amount of
+                        uncertainty the real robot would gain when in motion, and propogates that at every time step. It then discards any valid routes with too much uncertainty
+                        to help prevent the robot from taking potentially dangerous paths. While the final implementation is not entirely mine (we are a team after all!), I did help
+                        with the initial design of the directional-propagation system and.
+                    </p>
+                    <div class="button-row">
+                        <a href="https://tapnav.github.io/TAPNAV-Project/">
+                            <button>Project Page</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="img-container" style="max-width: 650px;">
+                <video controls muted>
+                    <source src="tapnav_real.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
