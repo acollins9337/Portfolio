@@ -92,7 +92,7 @@
         <section class="spy-section" id="about">
             <div class="split">
                 <div class="img-container" style="max-width: 350px;">
-                    <img src="misc_img/2025 Andy Grad-1.jpg" alt="Grad-1">
+                    <img src="misc_img/2025 Andy Grad-1.jpg" alt="Grad-1" loading="lazy" decoding="async">
                 </div>
 
                 <div class="split-text left align-left">
@@ -243,14 +243,51 @@
             <!--Calculation is height*(450/width)-->
             <div class="wide"><div class="fontbox"><h2>Publications</h2></div></div>
 
+            <div class="project-card" style="height: 578px;">
+                <div class="project-center">
+                    <div class="project-media">
+
+                        <div class="project-image-mask">
+                            <img src="tapnav/tapnav1.png" class="project-image active" style="border-radius: 18px" alt="" loading="lazy" decoding="async">
+                            <img src="tapnav/tapnav2.png" class="project-image" style="border-radius: 14px" alt="" loading="lazy" decoding="async">
+                            <img src="tapnav/tapnav3.png" class="project-image" alt="" loading="lazy" decoding="async">
+                            <span class="project-caption">TAPNAV</span>
+                            <button class="prev">&lt;</button>
+                            <button class="next">&gt;</button>
+                        </div>
+
+                        <div class="project-info">
+                            <div class="project-heading">
+                                <h3>TAPNAV</h3>
+                                <p class="project-subhead">Under Review for ICRA 2027</p>
+                            </div>
+                            <p>
+                                TAPNAV is a humanoid navigation pipeline that enables robots to reason about their
+                                environment tthrough touch. By probing surfaces TAPNAV builds a picture of a robots
+                                pose uncertainty, then decides  whehter or not it is safe to proceed. Global planning 
+                                also accounts for uncertainty, so the robot both plans for uncertainty and accounts for it at test time.
+                                My contribution was to early hardware development, environment simulation, and constrained uncertainty propagation.
+                            </p>
+                            <p class="project-authors">
+                                Huaze Liu, Zhenyu Wu, Jaehwi Jang, Junjie Sheng, <b>Andrew Collins</b>, Aaron Xie, Zhaoyuan Gu, Kaijie Zhu, Ding Jiang, Kevin Cai, Ye Zhao
+                            </p>
+                            <a href="tapnav/tapnav.html">
+                                <button>See More</button>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
             <div class="project-card" style="height: 569px;">
                 <div class="project-center">
                     <div class="project-media">
 
                         <div class="project-image-mask">
-                            <img src="wtumi/can.png" class="project-image active" alt="">
-                            <img src="wtumi/ball.png" class="project-image" alt="">
-                            <img src="wtumi/beam.png" class="project-image" alt="">
+                            <img src="wtumi/can.png" class="project-image active" alt="" loading="lazy" decoding="async">
+                            <img src="wtumi/ball.png" class="project-image" alt="" loading="lazy" decoding="async">
+                            <img src="wtumi/beam.png" class="project-image" alt="" loading="lazy" decoding="async">
                             <span class="project-caption">WT-UMI</span>
                             <button class="prev">&lt;</button>
                             <button class="next">&gt;</button>
@@ -280,43 +317,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="project-card" style="height: 578px;">
-                <div class="project-center">
-                    <div class="project-media">
-
-                        <div class="project-image-mask">
-                            <img src="tapnav/tapnav1.png" class="project-image active" style="border-radius: 18px" alt="">
-                            <img src="tapnav/tapnav2.png" class="project-image" style="border-radius: 14px" alt="">
-                            <img src="tapnav/tapnav3.png" class="project-image" alt="">
-                            <span class="project-caption">TAPNAV</span>
-                            <button class="prev">&lt;</button>
-                            <button class="next">&gt;</button>
-                        </div>
-
-                        <div class="project-info">
-                            <div class="project-heading">
-                                <h3>TAPNAV</h3>
-                                <p class="project-subhead">Under Review for ICRA 2027</p>
-                            </div>
-                            <p>
-                                TAPNAV is a humanoid navigation pipeline that enables robots to reason about their
-                                environment tthrough touch. By probing surfaces TAPNAV builds a picture of a robots
-                                pose uncertainty, then decides  whehter or not it is safe to proceed. Global planning 
-                                also accounts for uncertainty, so the robot both plans for uncertainty and accounts for it at test time.
-                                My contribution was to early hardware development, environment simulation, and constrained uncertainty propagation.
-                            </p>
-                            <p class="project-authors">
-                                Huaze Liu, Zhenyu Wu, Jaehwi Jang, Junjie Sheng, <b>Andrew Collins</b>, Aaron Xie, Zhaoyuan Gu, Kaijie Zhu, Ding Jiang, Kevin Cai, Ye Zhao
-                            </p>
-                            <a href="tapnav/tapnav.html">
-                                <button>See More</button>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
         </section>
 
         <section class="spy-section" id="projects">
@@ -327,7 +327,7 @@
                     <div class="project-media">
 
                         <div class="project-image-mask">
-                            <img src="hand2hand/hand2hand.png" class="project-image active" alt="">
+                            <img src="hand2hand/hand2hand.png" class="project-image active" alt="" loading="lazy" decoding="async">
                             <span class="project-caption">Hand2Hand</span>
                             <button class="prev">&lt;</button>
                             <button class="next">&gt;</button>
@@ -357,10 +357,10 @@
                     <div class="project-media">
 
                         <div class="project-image-mask">
-                            <img src="ml-jokes/svm.png" class="project-image active" alt="">
-                            <img src="ml-jokes/HDBSCAN.jpg" class ="project-image" alt="">
-                            <img src="ml-jokes/SVMNumericalResults.png" class="project-image" alt="">
-                            <img src="ml-jokes/LinearRegressionPredictedvsActual.png" class="project-image" style="height: 398px" alt="">
+                            <img src="ml-jokes/svm.png" class="project-image active" alt="" loading="lazy" decoding="async">
+                            <img src="ml-jokes/HDBSCAN.jpg" class ="project-image" alt="" loading="lazy" decoding="async">
+                            <img src="ml-jokes/SVMNumericalResults.png" class="project-image" alt="" loading="lazy" decoding="async">
+                            <img src="ml-jokes/LinearRegressionPredictedvsActual.png" class="project-image" style="height: 398px" alt="" loading="lazy" decoding="async">
                             <span class="project-caption">Humor Predictor</span>
                             <button class="prev">&lt;</button>
                             <button class="next">&gt;</button>
@@ -389,7 +389,7 @@
                     <div class="project-media">
 
                         <div class="project-image-mask">
-                            <img src="maze-solver/tb3.jpg" class="project-image active" alt="">
+                            <img src="maze-solver/tb3.jpg" class="project-image active" alt="" loading="lazy" decoding="async">
                             <span class="project-caption">Maze Solver</span>
                             <button class="prev">&lt;</button>
                             <button class="next">&gt;</button>
@@ -418,9 +418,9 @@
                     <div class="project-media" >
 
                         <div class="project-image-mask">
-                            <img src="capstone/skid.jpeg" class="project-image active" alt="">
-                            <img src="capstone/proto2.JPG" class="project-image" alt="">
-                            <img src="capstone/prototype.jpeg" class="project-image" alt="">
+                            <img src="capstone/skid.jpeg" class="project-image active" alt="" loading="lazy" decoding="async">
+                            <img src="capstone/proto2.JPG" class="project-image" alt="" loading="lazy" decoding="async">
+                            <img src="capstone/prototype.jpeg" class="project-image" alt="" loading="lazy" decoding="async">
                             <span class="project-caption">CIP Skid</span>
                             <button class="prev">&lt;</button>
                             <button class="next">&gt;</button>
@@ -450,17 +450,17 @@
                     <div class="project-media">
 
                         <div class="project-image-mask">
-                            <img src="meowth/meowth2 title.jpg" class ="project-image active" alt="">
-                            <img src="meowth/meowth3.jpg" class ="project-image" alt="">
-                            <img src="meowth/meowth4.jpg" class ="project-image" alt="">
-                            <img src="meowth/meowth5.jpg" class ="project-image" alt="">
-                            <img src="meowth/meowth6.jpg" class ="project-image" alt="">
-                            <img src="meowth/meowth7.jpg" class ="project-image" alt="">
-                            <img src="meowth/meowth8.jpg" class ="project-image" alt="">
-                            <img src="meowth/meowth9.jpg" class ="project-image" alt="">
-                            <img src="meowth/meowth10.jpg" class ="project-image" alt="">
-                            <img src="meowth/meowth11.jpg" class ="project-image" alt="">
-                            <img src="meowth/meowth12.jpg" class ="project-image" alt="">
+                            <img src="meowth/meowth2 title.jpg" class ="project-image active" alt="" loading="lazy" decoding="async">
+                            <img src="meowth/meowth3.jpg" class ="project-image" alt="" loading="lazy" decoding="async">
+                            <img src="meowth/meowth4.jpg" class ="project-image" alt="" loading="lazy" decoding="async">
+                            <img src="meowth/meowth5.jpg" class ="project-image" alt="" loading="lazy" decoding="async">
+                            <img src="meowth/meowth6.jpg" class ="project-image" alt="" loading="lazy" decoding="async">
+                            <img src="meowth/meowth7.jpg" class ="project-image" alt="" loading="lazy" decoding="async">
+                            <img src="meowth/meowth8.jpg" class ="project-image" alt="" loading="lazy" decoding="async">
+                            <img src="meowth/meowth9.jpg" class ="project-image" alt="" loading="lazy" decoding="async">
+                            <img src="meowth/meowth10.jpg" class ="project-image" alt="" loading="lazy" decoding="async">
+                            <img src="meowth/meowth11.jpg" class ="project-image" alt="" loading="lazy" decoding="async">
+                            <img src="meowth/meowth12.jpg" class ="project-image" alt="" loading="lazy" decoding="async">
                             <span class="project-caption">VEXU Robot</span>
                             <button class="prev">&lt;</button>
                             <button class="next">&gt;</button>
